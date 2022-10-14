@@ -3,4 +3,4 @@
 Let's get social
 
 ## How the design looks like
-![](assets/LiveMe (Community).png)
+![](assets/live_me_community.png)
