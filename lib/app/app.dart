@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/utils/constants.dart';
 import '/app/ui/welcome.dart';
 
 class LiveMe extends StatelessWidget {
@@ -10,7 +11,7 @@ class LiveMe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
-      title: 'LiveMe',
+      title: AppConstants.kAppName,
       darkTheme: ThemeData.dark(),
       theme: ThemeData.light(),
       home: const Welcome(),
