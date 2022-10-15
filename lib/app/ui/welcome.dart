@@ -45,7 +45,7 @@ class Welcome extends StatelessWidget {
                   color: Colors.black,
                 ),
                 child: Text(
-                  'SOCIAL STREAMING',
+                  AppConstants.kStreaming,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontSize: 19,
@@ -61,7 +61,7 @@ class Welcome extends StatelessWidget {
               right: 30,
               child: AppButton(
                 onTapped: () {},
-                text: 'Login',
+                text: AppConstants.kLogin,
                 bgColor: Colors.black,
                 textColor: Colors.white,
               ),
@@ -72,7 +72,7 @@ class Welcome extends StatelessWidget {
               right: 30,
               child: AppButton(
                 onTapped: (){},
-                text: 'Sign Up',
+                text: AppConstants.kSignUp,
                 bgColor: Colors.white,
                 textColor: Colors.black,
               ),
