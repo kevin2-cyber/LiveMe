@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:live_me/app/ui/login.dart';
+import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/utils/app_assets.dart';
 import 'package:live_me/utils/constants.dart';
 
@@ -37,9 +39,9 @@ class Welcome extends StatelessWidget {
               left: 100,
               right: 100,
               child: Container(
-                width: 100,
-                height: 50,
-                padding: const EdgeInsets.only(top: 8.0),
+                width: 90,
+                height: 30,
+                padding: const EdgeInsets.only(top: 2.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.black,
@@ -60,7 +62,10 @@ class Welcome extends StatelessWidget {
               left: 30,
               right: 30,
               child: AppButton(
-                onTapped: () {},
+                onTapped: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Login()));
+                },
                 text: AppConstants.kLogin,
                 bgColor: Colors.black,
                 textColor: Colors.white,
@@ -71,7 +76,10 @@ class Welcome extends StatelessWidget {
               left: 30,
               right: 30,
               child: AppButton(
-                onTapped: (){},
+                onTapped: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const SignUp()));
+                },
                 text: AppConstants.kSignUp,
                 bgColor: Colors.white,
                 textColor: Colors.black,
