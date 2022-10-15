@@ -9,6 +9,7 @@ class LiveMe extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
+      title: 'LiveMe',
       darkTheme: ThemeData.dark(),
       theme: ThemeData.light(),
       home: const Scaffold(),
