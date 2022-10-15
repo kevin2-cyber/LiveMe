@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/app/ui/welcome.dart';
 
 class LiveMe extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class LiveMe extends StatelessWidget {
       title: 'LiveMe',
       darkTheme: ThemeData.dark(),
       theme: ThemeData.light(),
-      home: const Scaffold(),
+      home: const Welcome(),
     );
   }
 }
