@@ -3,4 +3,5 @@ class AppConstants {
   static String kLogin = "Login";
   static String kSignUp = "Sign Up";
   static String kStreaming = "SOCIAL STREAMING";
+  static String kBack = "Back";
 }
