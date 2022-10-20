@@ -14,6 +14,7 @@ class SignUp extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 60.0, horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
                 onTap: (){

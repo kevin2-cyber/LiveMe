@@ -18,20 +18,19 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: bgColor,
+    return MaterialButton(
+      height: 50,
+      color: bgColor,
+      onPressed: onTapped,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10)
       ),
-      child: TextButton(
-        onPressed: onTapped,
-        child: Text(
-          text,
-          style: GoogleFonts.poppins(
-            fontSize: 17,
-            fontWeight: FontWeight.w500,
-            color: textColor,
-          ),
+      child: Text(
+        text,
+        style: GoogleFonts.poppins(
+          fontSize: 17,
+          fontWeight: FontWeight.w500,
+          color: textColor,
         ),
       ),
     );
