@@ -15,6 +15,7 @@ class Login extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 60.0, horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
                 onTap: (){
@@ -57,6 +58,10 @@ class Login extends StatelessWidget {
                   color: Colors.black38,
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+
             ],
           ),
         ),
