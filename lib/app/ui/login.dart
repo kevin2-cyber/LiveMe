@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:live_me/app/widgets/edit_text.dart';
 
 import '../../utils/constants.dart';
 
@@ -41,7 +42,7 @@ class Login extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 70,
               ),
               Text(
                 AppConstants.kLogin,
@@ -49,19 +50,21 @@ class Login extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
               Text(
                   'Enter your email address and\npassword  to access your account',
                 style: GoogleFonts.poppins(
                   color: Colors.black38,
+                  fontSize: 20,
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 90,
               ),
-
+              EditText(label: 'Email', obscureText: false),
+              const SizedBox(
+                height: 40,
+              ),
+              EditText(label: 'Password', obscureText: true),
             ],
           ),
         ),

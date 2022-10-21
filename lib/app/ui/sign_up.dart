@@ -43,7 +43,7 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 70,
               ),
               Text(
                   AppConstants.kSignUp,
@@ -52,13 +52,11 @@ class SignUp extends StatelessWidget {
                   fontSize: 32,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
               Text(
                 'Please fill information to create an\naccount and sign up to continue.',
                 style: GoogleFonts.poppins(
                   color: Colors.black38,
+                  fontSize: 20,
                 ),
               ),
               const SizedBox(
@@ -68,7 +66,8 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              EditText(label: 'Password', obscureText: isVisible, suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
+              EditText(label: 'Password', obscureText: isVisible, ),
+                // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
                 height: 40,
               ),
