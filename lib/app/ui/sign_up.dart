@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:live_me/utils/constants.dart';
 
+import '../widgets/edit_text.dart';
+
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -61,11 +63,11 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              editText(label: 'Email', obscureText: false),
+              const EditText(label: 'Email', obscureText: false),
               const SizedBox(
                 height: 20,
               ),
-              editText(label: 'Password', obscureText: true),
+              const EditText(label: 'Password', obscureText: true),
             ],
           ),
         ),
@@ -74,36 +76,3 @@ class SignUp extends StatelessWidget {
   }
 }
 
-Widget editText({label,obscureText = false}){
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.grey.shade400,
-        ),
-        child: TextFormField(
-          obscureText: obscureText,
-          decoration: InputDecoration(
-            focusColor: Colors.grey.shade400,
-            hintText: label,
-            contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(
-                color: AppConstants.kEditTextSelected,
-              ),
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(
-                color: AppConstants.kEditTextNormal,
-              ),
-            ),
-          ),
-        ),
-      ),
-    ],
-  );
-}
