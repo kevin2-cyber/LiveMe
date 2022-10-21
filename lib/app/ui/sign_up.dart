@@ -9,6 +9,7 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isVisible = false;
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -61,13 +62,17 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 90,
               ),
-              const EditText(label: 'Email', obscureText: false),
+               EditText(label: 'Email', obscureText: false,),
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
-              const EditText(label: 'Password', obscureText: true),
+              EditText(label: 'Password', obscureText: isVisible, suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
+              const SizedBox(
+                height: 40,
+              ),
+              EditText(label: 'Enter mobile number', obscureText: false),
             ],
           ),
         ),

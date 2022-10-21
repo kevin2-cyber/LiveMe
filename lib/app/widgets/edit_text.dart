@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/constants.dart';
 
 class EditText extends StatelessWidget {
   final String label;
   final bool obscureText;
+  final Function? verifyNumber;
+  final Widget? suffixIcon;
 
   const EditText({
       Key? key,
       required this.label,
-      required this.obscureText
-      })
+      required this.obscureText,
+      this.verifyNumber,
+      this.suffixIcon})
       : super(key: key);
 
   @override
@@ -21,26 +25,24 @@ class EditText extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.grey.shade400,
+            color: AppConstants.kEditTextNormal,
           ),
           child: TextFormField(
             obscureText: obscureText,
             decoration: InputDecoration(
-              focusColor: Colors.grey.shade400,
+              focusColor: AppConstants.kEditTextNormal,
               hintText: label,
+              hintStyle: GoogleFonts.poppins(),
               contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: const BorderSide(
-                  color: AppConstants.kEditTextSelected,
-                ),
+                borderSide: BorderSide.none,
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: const BorderSide(
-                  color: AppConstants.kEditTextNormal,
-                ),
+                borderSide: BorderSide.none,
               ),
+              suffix: suffixIcon,
             ),
           ),
         ),
