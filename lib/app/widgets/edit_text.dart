@@ -6,14 +6,12 @@ import '../../utils/constants.dart';
 class EditText extends StatelessWidget {
   final String label;
   final bool obscureText;
-  final Function? verifyNumber;
   final Widget? suffixIcon;
 
   const EditText({
       Key? key,
       required this.label,
       required this.obscureText,
-      this.verifyNumber,
       this.suffixIcon})
       : super(key: key);
 
