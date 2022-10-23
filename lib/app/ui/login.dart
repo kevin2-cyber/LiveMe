@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 
@@ -90,7 +91,10 @@ class Login extends StatelessWidget {
                 children: [
                   const Text('Do\'nt have an account?'),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const SignUp()));
+                      },
                       child: Text(AppConstants.kSignUp),
                   ),
                 ],

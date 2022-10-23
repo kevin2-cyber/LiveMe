@@ -3,6 +3,7 @@ import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 
 import '../widgets/edit_text.dart';
+import 'login.dart';
 
 enum Gender { male, female }
 
@@ -131,7 +132,10 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   const Text('Already have an account?'),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const Login()));
+                    },
                     child: Text(AppConstants.kLogin),
                   ),
                 ],
