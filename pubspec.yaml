@@ -52,6 +52,8 @@ flutter_native_splash:
   color: "#FFFFFF"
   color_dark: "#FFFFFF"
   icon_background_color_dark: "#FFFFFF"
+  branding: assets/images/social_streaming.png
+  branding_dark: assets/images/social_streaming.png
   web: false
   android_12:
     image: assets/images/live_me.png
@@ -60,5 +62,7 @@ flutter_native_splash:
     color_dark: "#FFFFFF"
     icon_background_color: "#FFFFFF"
     icon_background_color_dark: "#FFFFFF"
+    branding: assets/images/social_streaming.png
+    branding_dark: assets/images/social_streaming.png
 
 
