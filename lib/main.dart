@@ -18,5 +18,5 @@ void main(){
   );
 
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const LiveMe());
+  runApp(const LiveMeApp());
 }

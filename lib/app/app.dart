@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import '/utils/constants.dart';
 import '/app/ui/welcome.dart';
 
-class LiveMe extends StatelessWidget {
+class LiveMeApp extends StatelessWidget {
 
-  const LiveMe({Key? key}) : super(key: key);
+  const LiveMeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
