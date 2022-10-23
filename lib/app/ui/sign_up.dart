@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 
 import '../widgets/edit_text.dart';
 
-enum Gender {
-  male,
-  female
-}
+enum Gender { male, female }
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -16,7 +14,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
   Gender? _character = Gender.male;
 
   @override
@@ -33,7 +30,7 @@ class _SignUpState extends State<SignUp> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pop(context);
                 },
                 child: Row(
@@ -46,7 +43,7 @@ class _SignUpState extends State<SignUp> {
                       width: 0.2,
                     ),
                     Text(
-                        AppConstants.kBack,
+                      AppConstants.kBack,
                       style: const TextStyle(
                         color: Colors.lightBlue,
                         fontSize: 20,
@@ -59,7 +56,7 @@ class _SignUpState extends State<SignUp> {
                 height: 70,
               ),
               Text(
-                  AppConstants.kSignUp,
+                AppConstants.kSignUp,
                 textAlign: TextAlign.left,
                 style: const TextStyle(
                   fontSize: 32,
@@ -75,12 +72,12 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(
                 height: 90,
               ),
-               const EditText(label: 'Email', obscureText: false),
+              const EditText(label: 'Email', obscureText: false),
               const SizedBox(
                 height: 40,
               ),
               EditText(label: 'Password', obscureText: isVisible),
-                // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
+              // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
                 height: 40,
               ),
@@ -117,6 +114,28 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              AppButton(
+                  onTapped: () {},
+                  text: AppConstants.kSignUp,
+                  bgColor: Colors.black,
+                  textColor: Colors.white
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Already have an account?'),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(AppConstants.kLogin),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -124,4 +143,3 @@ class _SignUpState extends State<SignUp> {
     );
   }
 }
-
