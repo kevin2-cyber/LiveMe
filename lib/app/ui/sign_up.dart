@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 
 import '../widgets/edit_text.dart';
+import 'login.dart';
 
-class SignUp extends StatelessWidget {
+enum Gender { male, female }
+
+class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  Gender? _character = Gender.male;
 
   @override
   Widget build(BuildContext context) {
     bool isVisible = false;
+    String? gender;
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -20,7 +31,7 @@ class SignUp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pop(context);
                 },
                 child: Row(
@@ -33,8 +44,8 @@ class SignUp extends StatelessWidget {
                       width: 0.2,
                     ),
                     Text(
-                        AppConstants.kBack,
-                      style: GoogleFonts.poppins(
+                      AppConstants.kBack,
+                      style: const TextStyle(
                         color: Colors.lightBlue,
                         fontSize: 20,
                       ),
@@ -46,15 +57,15 @@ class SignUp extends StatelessWidget {
                 height: 70,
               ),
               Text(
-                  AppConstants.kSignUp,
+                AppConstants.kSignUp,
                 textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 32,
                 ),
               ),
-              Text(
+              const Text(
                 'Please fill information to create an\naccount and sign up to continue.',
-                style: GoogleFonts.poppins(
+                style: TextStyle(
                   color: Colors.black38,
                   fontSize: 20,
                 ),
@@ -62,16 +73,73 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 90,
               ),
-               EditText(label: 'Email', obscureText: false,),
+              const EditText(label: 'Email', obscureText: false),
               const SizedBox(
                 height: 40,
               ),
-              EditText(label: 'Password', obscureText: isVisible, ),
-                // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
+              EditText(label: 'Password', obscureText: isVisible),
+              // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
                 height: 40,
               ),
-              EditText(label: 'Enter mobile number', obscureText: false),
+              const EditText(label: 'Enter mobile number', obscureText: false),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text('Gender'),
+              Column(
+                children: [
+                  ListTile(
+                    title: const Text('Male'),
+                    leading: Radio<Gender>(
+                      value: Gender.male,
+                      groupValue: _character,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    title: const Text('Female'),
+                    leading: Radio<Gender>(
+                      value: Gender.female,
+                      groupValue: _character,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              AppButton(
+                  onTapped: () {},
+                  text: AppConstants.kSignUp,
+                  bgColor: Colors.black,
+                  textColor: Colors.white
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Already have an account?'),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const Login()));
+                    },
+                    child: Text(AppConstants.kLogin),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -79,4 +147,3 @@ class SignUp extends StatelessWidget {
     );
   }
 }
-

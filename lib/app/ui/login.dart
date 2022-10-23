@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:live_me/app/ui/sign_up.dart';
+import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 
 import '../../utils/constants.dart';
@@ -19,7 +20,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pop(context);
                 },
                 child: Row(
@@ -33,7 +34,7 @@ class Login extends StatelessWidget {
                     ),
                     Text(
                       AppConstants.kBack,
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         color: Colors.lightBlue,
                         fontSize: 20,
                       ),
@@ -46,13 +47,13 @@ class Login extends StatelessWidget {
               ),
               Text(
                 AppConstants.kLogin,
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 32,
                 ),
               ),
-              Text(
-                  'Enter your email address and\npassword  to access your account',
-                style: GoogleFonts.poppins(
+              const Text(
+                'Enter your email address and\npassword  to access your account',
+                style: TextStyle(
                   color: Colors.black38,
                   fontSize: 20,
                 ),
@@ -65,6 +66,39 @@ class Login extends StatelessWidget {
                 height: 40,
               ),
               const EditText(label: 'Password', obscureText: true),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text('Forgot Password?'),
+                  ),
+                ],
+              ),
+              AppButton(
+                  onTapped: () {},
+                  text: AppConstants.kLogin,
+                  bgColor: Colors.black,
+                  textColor: Colors.white),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Do\'nt have an account?'),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const SignUp()));
+                      },
+                      child: Text(AppConstants.kSignUp),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

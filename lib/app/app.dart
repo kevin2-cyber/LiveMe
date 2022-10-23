@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '/utils/constants.dart';
 import '/app/ui/welcome.dart';
 
-class LiveMe extends StatelessWidget {
+class LiveMeApp extends StatelessWidget {
 
-  const LiveMe({Key? key}) : super(key: key);
+  const LiveMeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,12 @@ class LiveMe extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       title: AppConstants.kAppName,
-      darkTheme: ThemeData.dark(),
-      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark().copyWith(
+        textTheme: GoogleFonts.poppinsTextTheme()
+      ),
+      theme: ThemeData.light().copyWith(
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
       home: const Welcome(),
     );
   }
