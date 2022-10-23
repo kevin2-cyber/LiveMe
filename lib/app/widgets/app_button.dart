@@ -19,6 +19,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       height: 50,
+      minWidth: MediaQuery.of(context).size.width * 1,
       color: bgColor,
       onPressed: onTapped,
       shape: RoundedRectangleBorder(

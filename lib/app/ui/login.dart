@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 
 import '../../utils/constants.dart';
@@ -18,7 +19,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.pop(context);
                 },
                 child: Row(
@@ -50,7 +51,7 @@ class Login extends StatelessWidget {
                 ),
               ),
               const Text(
-                  'Enter your email address and\npassword  to access your account',
+                'Enter your email address and\npassword  to access your account',
                 style: TextStyle(
                   color: Colors.black38,
                   fontSize: 20,
@@ -64,6 +65,36 @@ class Login extends StatelessWidget {
                 height: 40,
               ),
               const EditText(label: 'Password', obscureText: true),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text('Forgot Password?'),
+                  ),
+                ],
+              ),
+              AppButton(
+                  onTapped: () {},
+                  text: AppConstants.kLogin,
+                  bgColor: Colors.black,
+                  textColor: Colors.white),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Do\'nt have an account?'),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(AppConstants.kSignUp),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
