@@ -13,7 +13,9 @@ class LiveMeApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       title: AppConstants.kAppName,
-      darkTheme: ThemeData.dark(),
+      darkTheme: ThemeData.dark().copyWith(
+        textTheme: GoogleFonts.poppinsTextTheme()
+      ),
       theme: ThemeData.light().copyWith(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
