@@ -77,32 +77,10 @@ class _SignUpState extends State<SignUp> {
                 height: 40,
               ),
               const EditText(label: 'Enter mobile number', obscureText: false),
-              const Text('Gender'),
-              Row(
-                children: [
-                  RadioListTile(
-                    title: const Text("Male"),
-                    value: "male",
-                    groupValue: gender,
-                    onChanged: (value){
-                      setState(() {
-                        gender = value.toString();
-                      });
-                    },
-                  ),
-
-                  RadioListTile(
-                    title: const Text("Female"),
-                    value: "female",
-                    groupValue: gender,
-                    onChanged: (value){
-                      setState(() {
-                        gender = value.toString();
-                      });
-                    },
-                  ),
-                ],
+              const SizedBox(
+                height: 20,
               ),
+              const Text('Gender'),
             ],
           ),
         ),
