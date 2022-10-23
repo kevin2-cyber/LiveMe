@@ -3,6 +3,11 @@ import 'package:live_me/utils/constants.dart';
 
 import '../widgets/edit_text.dart';
 
+enum Gender {
+  male,
+  female
+}
+
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -11,6 +16,9 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+
+  Gender? _character = Gender.male;
+
   @override
   Widget build(BuildContext context) {
     bool isVisible = false;
@@ -81,6 +89,34 @@ class _SignUpState extends State<SignUp> {
                 height: 20,
               ),
               const Text('Gender'),
+              Column(
+                children: [
+                  ListTile(
+                    title: const Text('Male'),
+                    leading: Radio<Gender>(
+                      value: Gender.male,
+                      groupValue: _character,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    title: const Text('Female'),
+                    leading: Radio<Gender>(
+                      value: Gender.female,
+                      groupValue: _character,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
