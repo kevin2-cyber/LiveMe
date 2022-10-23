@@ -93,6 +93,7 @@ class _SignUpState extends State<SignUp> {
                     title: const Text('Male'),
                     value: Gender.male,
                     groupValue: _character,
+                    activeColor: Colors.black,
                     onChanged: (Gender? value) {
                       setState(() {
                         _character = value;
@@ -103,6 +104,7 @@ class _SignUpState extends State<SignUp> {
                     title: const Text('Female'),
                     value: Gender.female,
                     groupValue: _character,
+                    activeColor: Colors.black,
                     onChanged: (Gender? value) {
                       setState(() {
                         _character = value;
