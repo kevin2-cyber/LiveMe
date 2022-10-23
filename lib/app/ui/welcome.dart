@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:live_me/app/ui/login.dart';
 import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/utils/app_assets.dart';
@@ -27,7 +26,7 @@ class Welcome extends StatelessWidget {
             Center(
               child: Text(
                 AppConstants.kAppName,
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 53,
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
@@ -49,7 +48,7 @@ class Welcome extends StatelessWidget {
                 child: Text(
                   AppConstants.kStreaming,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(
+                  style: const TextStyle(
                     fontSize: 19,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,

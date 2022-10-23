@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 
 import '../../utils/constants.dart';
@@ -33,7 +32,7 @@ class Login extends StatelessWidget {
                     ),
                     Text(
                       AppConstants.kBack,
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         color: Colors.lightBlue,
                         fontSize: 20,
                       ),
@@ -46,13 +45,13 @@ class Login extends StatelessWidget {
               ),
               Text(
                 AppConstants.kLogin,
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 32,
                 ),
               ),
-              Text(
+              const Text(
                   'Enter your email address and\npassword  to access your account',
-                style: GoogleFonts.poppins(
+                style: TextStyle(
                   color: Colors.black38,
                   fontSize: 20,
                 ),

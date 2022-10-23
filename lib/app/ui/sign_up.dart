@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:live_me/utils/constants.dart';
 
 import '../widgets/edit_text.dart';
@@ -34,7 +33,7 @@ class SignUp extends StatelessWidget {
                     ),
                     Text(
                         AppConstants.kBack,
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         color: Colors.lightBlue,
                         fontSize: 20,
                       ),
@@ -48,13 +47,13 @@ class SignUp extends StatelessWidget {
               Text(
                   AppConstants.kSignUp,
                 textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   fontSize: 32,
                 ),
               ),
-              Text(
+              const Text(
                 'Please fill information to create an\naccount and sign up to continue.',
-                style: GoogleFonts.poppins(
+                style: TextStyle(
                   color: Colors.black38,
                   fontSize: 20,
                 ),
@@ -62,16 +61,16 @@ class SignUp extends StatelessWidget {
               const SizedBox(
                 height: 90,
               ),
-               EditText(label: 'Email', obscureText: false,),
+               const EditText(label: 'Email', obscureText: false),
               const SizedBox(
                 height: 40,
               ),
-              EditText(label: 'Password', obscureText: isVisible, ),
+              EditText(label: 'Password', obscureText: isVisible),
                 // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
                 height: 40,
               ),
-              EditText(label: 'Enter mobile number', obscureText: false),
+              const EditText(label: 'Enter mobile number', obscureText: false),
             ],
           ),
         ),
