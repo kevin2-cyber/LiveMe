@@ -20,7 +20,6 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     bool isVisible = false;
-    String? gender;
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -89,29 +88,27 @@ class _SignUpState extends State<SignUp> {
               const Text('Gender'),
               Column(
                 children: [
-                  ListTile(
+                  RadioListTile<Gender>(
                     title: const Text('Male'),
-                    leading: Radio<Gender>(
-                      value: Gender.male,
-                      groupValue: _character,
-                      onChanged: (Gender? value) {
-                        setState(() {
-                          _character = value;
-                        });
-                      },
-                    ),
+                    value: Gender.male,
+                    groupValue: _character,
+                    activeColor: Colors.black,
+                    onChanged: (Gender? value) {
+                      setState(() {
+                        _character = value;
+                      });
+                    },
                   ),
-                  ListTile(
+                  RadioListTile<Gender>(
                     title: const Text('Female'),
-                    leading: Radio<Gender>(
-                      value: Gender.female,
-                      groupValue: _character,
-                      onChanged: (Gender? value) {
-                        setState(() {
-                          _character = value;
-                        });
-                      },
-                    ),
+                    value: Gender.female,
+                    groupValue: _character,
+                    activeColor: Colors.black,
+                    onChanged: (Gender? value) {
+                      setState(() {
+                        _character = value;
+                      });
+                    },
                   ),
                 ],
               ),
