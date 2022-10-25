@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
-
-import '../../utils/constants.dart';
+import 'package:live_me/utils/constants.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -81,8 +80,9 @@ class Login extends StatelessWidget {
               AppButton(
                   onTapped: () {},
                   text: AppConstants.kLogin,
-                  bgColor: Colors.black,
-                  textColor: Colors.white),
+                  bgColor: AppConstants.kPrimaryBlack,
+                  textColor: AppConstants.kPrimaryWhite
+              ),
               SizedBox(
                 height: MediaQuery.of(context).size.width * 0.5,
               ),

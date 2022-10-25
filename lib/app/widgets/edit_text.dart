@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../utils/constants.dart';
+import 'package:live_me/utils/constants.dart';
 
 class EditText extends StatefulWidget {
   final String label;

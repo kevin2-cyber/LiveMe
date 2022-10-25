@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/sign_up.dart';
+import 'package:live_me/app/widgets/app_button.dart';
+import 'package:live_me/app/widgets/edit_text.dart';
+import 'package:live_me/utils/constants.dart';
 
 class SelectGender extends StatefulWidget {
   const SelectGender({Key? key}) : super(key: key);
@@ -30,7 +33,7 @@ class _SelectGenderState extends State<SelectGender> {
                 title: const Text('Male'),
                 value: Gender.male,
                 groupValue: _character,
-                activeColor: Colors.black,
+                activeColor: AppConstants.kPrimaryBlack,
                 onChanged: (Gender? value) {
                   setState(() {
                     _character = value;
@@ -41,7 +44,7 @@ class _SelectGenderState extends State<SelectGender> {
                 title: const Text('Female'),
                 value: Gender.female,
                 groupValue: _character,
-                activeColor: Colors.black,
+                activeColor: AppConstants.kPrimaryBlack,
                 onChanged: (Gender? value) {
                   setState(() {
                     _character = value;
@@ -49,6 +52,20 @@ class _SelectGenderState extends State<SelectGender> {
                 },
               ),
             ],
+          ),
+          const Text('Date of Birth'),
+          Row(
+            children: const [
+              EditText(label: 'Day', obscureText: false),
+              EditText(label: 'Month', obscureText: false),
+              EditText(label: 'Year', obscureText: false),
+            ],
+          ),
+          AppButton(
+              onTapped: () {},
+              text: 'Submit',
+              bgColor: AppConstants.kPrimaryBlack,
+              textColor: AppConstants.kPrimaryWhite
           ),
         ],
       ),
