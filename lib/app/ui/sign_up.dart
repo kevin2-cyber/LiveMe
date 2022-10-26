@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/ui/select_gender.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
-
-import '../widgets/edit_text.dart';
-import 'login.dart';
+import 'package:live_me/app/widgets/edit_text.dart';
+import 'package:live_me/app/ui/login.dart';
 
 enum Gender { male, female }
 
@@ -116,9 +116,11 @@ class _SignUpState extends State<SignUp> {
                 height: 10,
               ),
               AppButton(
-                  onTapped: () {},
+                  onTapped: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const SelectGender()));
+                  },
                   text: AppConstants.kSignUp,
-                  bgColor: Colors.black,
+                  bgColor: AppConstants.kPrimaryBlack,
                   textColor: Colors.white
               ),
               const SizedBox(

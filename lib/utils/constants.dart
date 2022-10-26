@@ -8,4 +8,6 @@ class AppConstants {
   static String kBack = "Back";
   static const kEditTextSelected = Color(0xFF929292);
   static const kEditTextNormal = Color(0xFFF2F2F7);
+  static const kPrimaryBlack = Color(0xFF0F0F0F);
+  static const kPrimaryWhite = Color(0xFFE5E5E5);
 }

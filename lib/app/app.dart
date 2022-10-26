@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '/utils/constants.dart';
-import '/app/ui/welcome.dart';
+import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/ui/welcome.dart';
 
 class LiveMeApp extends StatelessWidget {
 
@@ -14,10 +14,12 @@ class LiveMeApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       title: AppConstants.kAppName,
       darkTheme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.poppinsTextTheme()
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        primaryColorDark: AppConstants.kPrimaryBlack
       ),
       theme: ThemeData.light().copyWith(
         textTheme: GoogleFonts.poppinsTextTheme(),
+        primaryColorLight: AppConstants.kPrimaryWhite,
       ),
       home: const Welcome(),
     );
