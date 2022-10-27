@@ -21,11 +21,17 @@ class _SelectGenderState extends State<SelectGender> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const Text('Information'),
+              const Text(
+                  'Information',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               const Text('Please fill Gender and age to moving\nfurther'),
               Column(
                 children: [
