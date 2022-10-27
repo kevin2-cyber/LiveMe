@@ -5,7 +5,6 @@ import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/app/ui/login.dart';
 
-enum Gender { male, female }
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -15,7 +14,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  Gender? _character = Gender.male;
 
   @override
   Widget build(BuildContext context) {
@@ -88,28 +86,7 @@ class _SignUpState extends State<SignUp> {
               const Text('Gender'),
               Column(
                 children: [
-                  RadioListTile<Gender>(
-                    title: const Text('Male'),
-                    value: Gender.male,
-                    groupValue: _character,
-                    activeColor: Colors.black,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
-                  ),
-                  RadioListTile<Gender>(
-                    title: const Text('Female'),
-                    value: Gender.female,
-                    groupValue: _character,
-                    activeColor: Colors.black,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
-                  ),
+
                 ],
               ),
               const SizedBox(

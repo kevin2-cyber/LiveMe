@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/widgets/app_button.dart';
-import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/utils/constants.dart';
 
 class SelectGender extends StatefulWidget {
@@ -12,7 +10,6 @@ class SelectGender extends StatefulWidget {
 }
 
 class _SelectGenderState extends State<SelectGender> {
-  Gender? _character = Gender.male;
 
   @override
   Widget build(BuildContext context) {
@@ -45,34 +42,7 @@ class _SelectGenderState extends State<SelectGender> {
               ),
               Column(
                 children: [
-                  SizedBox(
-                    width: double.maxFinite,
-                    child: RadioListTile<Gender>(
-                      title: const Text('Male'),
-                      value: Gender.male,
-                      groupValue: _character,
-                      activeColor: AppConstants.kPrimaryBlack,
-                      onChanged: (Gender? value) {
-                        setState(() {
-                          _character = value;
-                        });
-                      },
-                    ),
-                  ),
-                  SizedBox(
-                    width: double.maxFinite,
-                    child: RadioListTile<Gender>(
-                      title: const Text('Female'),
-                      value: Gender.female,
-                      groupValue: _character,
-                      activeColor: AppConstants.kPrimaryBlack,
-                      onChanged: (Gender? value) {
-                        setState(() {
-                          _character = value;
-                        });
-                      },
-                    ),
-                  ),
+
                 ],
               ),
               // const Text('Date of Birth'),
