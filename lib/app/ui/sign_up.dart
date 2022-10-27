@@ -5,6 +5,8 @@ import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/app/ui/login.dart';
 
+import '../widgets/app_radio.dart';
+
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -84,9 +86,16 @@ class _SignUpState extends State<SignUp> {
                 height: 20,
               ),
               const Text('Gender'),
-              Column(
-                children: [
-
+              Row(
+                children: const [
+                  AppRadio(
+                    title: 'Male',
+                    gender: Gender.on,
+                  ),
+                  AppRadio(
+                    title: 'Female',
+                    gender: Gender.on,
+                  ),
                 ],
               ),
               const SizedBox(

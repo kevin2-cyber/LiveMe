@@ -13,6 +13,7 @@ class AppRadio extends StatefulWidget {
 
 class _AppRadioState extends State<AppRadio> {
   Gender? _character;
+  bool isActive = false;
 
   get gender => Gender.off;
 
@@ -24,10 +25,12 @@ class _AppRadioState extends State<AppRadio> {
       child: ListTile(
         title: Text(widget.title),
         trailing: Radio<Gender>(
-          value: gender,
+          value: isActive ? Gender.off : Gender.on,
           groupValue: _character,
           onChanged: (Gender? value) {
-            _character = value;
+            setState(() {
+              _character = value;
+            });
           },
         ),
       ),
