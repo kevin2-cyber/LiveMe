@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum Gender { male, female }
+enum Gender { on, off }
 
 class AppRadio extends StatefulWidget {
   final String title;
@@ -14,7 +14,7 @@ class AppRadio extends StatefulWidget {
 class _AppRadioState extends State<AppRadio> {
   Gender? _character;
 
-  get gender => Gender.male;
+  get gender => Gender.off;
 
 
   @override
