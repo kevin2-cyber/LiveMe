@@ -33,6 +33,16 @@ class _SelectGenderState extends State<SelectGender> {
                 ),
               ),
               const Text('Please fill Gender and age to moving\nfurther'),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              const Text(
+                  'Gender',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
               Column(
                 children: [
                   SizedBox(
@@ -74,7 +84,9 @@ class _SelectGenderState extends State<SelectGender> {
               //   ],
               // ),
               AppButton(
-                  onTapped: () {},
+                  onTapped: () {
+                    Navigator.pop(context);
+                  },
                   text: 'Submit',
                   bgColor: AppConstants.kPrimaryBlack,
                   textColor: AppConstants.kPrimaryWhite

@@ -70,16 +70,16 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               const SizedBox(
-                height: 90,
+                height: 70,
               ),
               const EditText(label: 'Email', obscureText: false),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               EditText(label: 'Password', obscureText: isVisible),
               // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               const EditText(label: 'Enter mobile number', obscureText: false),
               const SizedBox(
@@ -123,8 +123,8 @@ class _SignUpState extends State<SignUp> {
                   bgColor: AppConstants.kPrimaryBlack,
                   textColor: Colors.white
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
