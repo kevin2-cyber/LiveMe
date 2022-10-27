@@ -29,38 +29,44 @@ class _SelectGenderState extends State<SelectGender> {
               const Text('Please fill Gender and age to moving\nfurther'),
               Column(
                 children: [
-                  RadioListTile<Gender>(
-                    title: const Text('Male'),
-                    value: Gender.male,
-                    groupValue: _character,
-                    activeColor: AppConstants.kPrimaryBlack,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
+                  SizedBox(
+                    width: double.maxFinite,
+                    child: RadioListTile<Gender>(
+                      title: const Text('Male'),
+                      value: Gender.male,
+                      groupValue: _character,
+                      activeColor: AppConstants.kPrimaryBlack,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
                   ),
-                  RadioListTile<Gender>(
-                    title: const Text('Female'),
-                    value: Gender.female,
-                    groupValue: _character,
-                    activeColor: AppConstants.kPrimaryBlack,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
+                  SizedBox(
+                    width: double.maxFinite,
+                    child: RadioListTile<Gender>(
+                      title: const Text('Female'),
+                      value: Gender.female,
+                      groupValue: _character,
+                      activeColor: AppConstants.kPrimaryBlack,
+                      onChanged: (Gender? value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
                   ),
                 ],
               ),
-              const Text('Date of Birth'),
-              Row(
-                children: const [
-                  EditText(label: 'Day', obscureText: false),
-                  EditText(label: 'Month', obscureText: false),
-                  EditText(label: 'Year', obscureText: false),
-                ],
-              ),
+              // const Text('Date of Birth'),
+              // Row(
+              //   children: const [
+              //     EditText(label: 'Day', obscureText: false),
+              //     EditText(label: 'Month', obscureText: false),
+              //     EditText(label: 'Year', obscureText: false),
+              //   ],
+              // ),
               AppButton(
                   onTapped: () {},
                   text: 'Submit',
