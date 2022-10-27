@@ -4,24 +4,32 @@ enum Gender { male, female }
 
 class AppRadio extends StatefulWidget {
   final String title;
-  const AppRadio({Key? key, required this.title}) : super(key: key);
+  final Gender gender;
+  const AppRadio({Key? key, required this.title, required this.gender}) : super(key: key);
 
   @override
   State<AppRadio> createState() => _AppRadioState();
 }
 
 class _AppRadioState extends State<AppRadio> {
-  Gender? _character = Gender.male;
+  Gender? _character;
+
+  get gender => Gender.male;
+
+
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(widget.title),
-      trailing: Radio<Gender>(
-        value: Gender.male,
-        groupValue: _character,
-        onChanged: (Gender? value) {
-          _character = value;
-        },
+    return SizedBox(
+      width: 160,
+      child: ListTile(
+        title: Text(widget.title),
+        trailing: Radio<Gender>(
+          value: gender,
+          groupValue: _character,
+          onChanged: (Gender? value) {
+            _character = value;
+          },
+        ),
       ),
     );
   }

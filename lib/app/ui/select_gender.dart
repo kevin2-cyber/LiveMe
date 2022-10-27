@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/widgets/app_button.dart';
+import 'package:live_me/app/widgets/app_radio.dart';
 import 'package:live_me/utils/constants.dart';
 
 class SelectGender extends StatefulWidget {
@@ -10,7 +11,6 @@ class SelectGender extends StatefulWidget {
 }
 
 class _SelectGenderState extends State<SelectGender> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _SelectGenderState extends State<SelectGender> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                  'Information',
+                'Information',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
@@ -34,15 +34,22 @@ class _SelectGenderState extends State<SelectGender> {
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               const Text(
-                  'Gender',
+                'Gender',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              Column(
-                children: [
-
+              Row(
+                children: const [
+                  AppRadio(
+                    title: 'Male',
+                    gender: Gender.male,
+                  ),
+                  AppRadio(
+                    title: 'Female',
+                    gender: Gender.female,
+                  ),
                 ],
               ),
               // const Text('Date of Birth'),
@@ -59,8 +66,7 @@ class _SelectGenderState extends State<SelectGender> {
                   },
                   text: 'Submit',
                   bgColor: AppConstants.kPrimaryBlack,
-                  textColor: AppConstants.kPrimaryWhite
-              ),
+                  textColor: AppConstants.kPrimaryWhite),
             ],
           ),
         ),
