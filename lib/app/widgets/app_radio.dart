@@ -15,7 +15,7 @@ class _AppRadioState extends State<AppRadio> {
   Gender? _character;
   bool isActive = false;
 
-  get gender => Gender.off;
+  get gender => isActive ? Gender.off : Gender.on;
 
 
   @override
@@ -25,7 +25,7 @@ class _AppRadioState extends State<AppRadio> {
       child: ListTile(
         title: Text(widget.title),
         trailing: Radio<Gender>(
-          value: isActive ? Gender.off : Gender.on,
+          value: gender,
           groupValue: _character,
           onChanged: (Gender? value) {
             setState(() {
