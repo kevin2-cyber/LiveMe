@@ -44,12 +44,12 @@ class _SelectGenderState extends State<SelectGender> {
                 children:  [
                   AppRadio(
                     title: 'Male',
-                    gender: Gender.on,
+                    gender: Gender.male,
                     onChanged: (Gender? gender) {},
                   ),
                   AppRadio(
                     title: 'Female',
-                    gender: Gender.on,
+                    gender: Gender.female,
                     onChanged: (Gender? gender) {},
                   ),
                 ],

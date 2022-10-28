@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
-enum Gender { on, off }
+enum Gender { male, female }
 
 class AppRadio extends StatelessWidget {
   final String title;
   final Gender gender;
   final void Function(Gender?)? onChanged;
+  final Gender? character;
   const AppRadio(
       {Key? key,
       required this.title,
       required this.gender,
-      required this.onChanged})
+      required this.onChanged,
+        this.character})
       : super(key: key);
 
 
 
   @override
   Widget build(BuildContext context) {
-    Gender? character;
     return SizedBox(
       width: 160,
       child: ListTile(

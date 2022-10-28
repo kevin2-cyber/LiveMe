@@ -4,6 +4,7 @@ import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/app/ui/login.dart';
+import 'package:live_me/utils/testing.dart';
 
 import '../widgets/app_radio.dart';
 
@@ -16,6 +17,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  Gender? newGender = Gender.male;
 
   @override
   Widget build(BuildContext context) {
@@ -90,13 +92,21 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   AppRadio(
                     title: 'Male',
-                    gender: Gender.on,
-                    onChanged: (Gender? gender) {},
+                    gender: Gender.male,
+                    onChanged: (Gender? gender) {
+                      setState(() {
+                        newGender = gender;
+                      });
+                    },
                   ),
                   AppRadio(
                     title: 'Female',
-                    gender: Gender.on,
-                    onChanged: (Gender? gender) {},
+                    gender: Gender.female,
+                    onChanged: (Gender? gender) {
+                      setState(() {
+                        newGender = gender;
+                      });
+                    },
                   ),
                 ],
               ),
@@ -121,7 +131,7 @@ class _SignUpState extends State<SignUp> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const Login()));
+                          MaterialPageRoute(builder: (context) => const MyStatefulWidget()));
                     },
                     child: Text(AppConstants.kLogin),
                   ),
