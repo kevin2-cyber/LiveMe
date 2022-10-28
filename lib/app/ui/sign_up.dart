@@ -95,23 +95,37 @@ class _SignUpState extends State<SignUp> {
               ),
               Row(
                 children: [
-                  AppRadio(
-                    title: 'Male',
-                    gender: Gender.male,
-                    onChanged: (Gender? gender) {
-                      setState(() {
-                        newGender = gender;
-                      });
-                    },
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Male'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.male,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
-                  AppRadio(
-                    title: 'Female',
-                    gender: Gender.female,
-                    onChanged: (Gender? gender) {
-                      setState(() {
-                        newGender = gender;
-                      });
-                    },
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Female'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.female,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),

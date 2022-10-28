@@ -11,6 +11,8 @@ class SelectGender extends StatefulWidget {
 }
 
 class _SelectGenderState extends State<SelectGender> {
+  Gender? newGender = Gender.male;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,16 +43,38 @@ class _SelectGenderState extends State<SelectGender> {
                 ),
               ),
               Row(
-                children:  [
-                  AppRadio(
-                    title: 'Male',
-                    gender: Gender.male,
-                    onChanged: (Gender? gender) {},
+                children: [
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Male'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.male,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
-                  AppRadio(
-                    title: 'Female',
-                    gender: Gender.female,
-                    onChanged: (Gender? gender) {},
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Female'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.female,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),
