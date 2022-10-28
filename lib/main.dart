@@ -11,7 +11,7 @@ void main(){
         style: const TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w300,
-          fontSize: 15,
+          fontSize: 18,
         ),
       ),
     ),
