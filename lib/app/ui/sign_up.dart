@@ -3,10 +3,8 @@ import 'package:live_me/app/ui/select_gender.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
-import 'package:live_me/app/ui/login.dart';
-import 'package:live_me/utils/testing.dart';
-
-import '../widgets/app_radio.dart';
+import 'package:live_me/utils/testing_pages/testing.dart';
+import 'package:live_me/app/widgets/app_radio.dart';
 
 
 class SignUp extends StatefulWidget {
