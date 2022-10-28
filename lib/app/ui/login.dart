@@ -58,11 +58,11 @@ class Login extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 90,
+                height: 70,
               ),
               const EditText(label: 'Email', obscureText: false),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               const EditText(label: 'Password', obscureText: true),
               const SizedBox(

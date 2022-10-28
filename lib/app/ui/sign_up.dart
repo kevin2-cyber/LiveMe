@@ -4,8 +4,10 @@ import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/app/ui/login.dart';
+import 'package:live_me/utils/testing.dart';
 
-enum Gender { male, female }
+import '../widgets/app_radio.dart';
+
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  Gender? _character = Gender.male;
+  Gender? newGender = Gender.male;
 
   @override
   Widget build(BuildContext context) {
@@ -70,45 +72,60 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               const SizedBox(
-                height: 90,
+                height: 70,
               ),
               const EditText(label: 'Email', obscureText: false),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               EditText(label: 'Password', obscureText: isVisible),
               // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               const EditText(label: 'Enter mobile number', obscureText: false),
               const SizedBox(
                 height: 20,
               ),
-              const Text('Gender'),
-              Column(
+              const Text(
+                  'Gender',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+              Row(
                 children: [
-                  RadioListTile<Gender>(
-                    title: const Text('Male'),
-                    value: Gender.male,
-                    groupValue: _character,
-                    activeColor: Colors.black,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Male'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.male,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
-                  RadioListTile<Gender>(
-                    title: const Text('Female'),
-                    value: Gender.female,
-                    groupValue: _character,
-                    activeColor: Colors.black,
-                    onChanged: (Gender? value) {
-                      setState(() {
-                        _character = value;
-                      });
-                    },
+                  SizedBox(
+                    width: 160,
+                    child: ListTile(
+                      title: const Text('Female'),
+                      trailing: Radio<Gender>(
+                        activeColor: AppConstants.kPrimaryBlack,
+                        value: Gender.female,
+                        groupValue: newGender,
+                        onChanged: (Gender? value) {
+                          setState(() {
+                            newGender = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -123,8 +140,8 @@ class _SignUpState extends State<SignUp> {
                   bgColor: AppConstants.kPrimaryBlack,
                   textColor: Colors.white
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,7 +150,7 @@ class _SignUpState extends State<SignUp> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const Login()));
+                          MaterialPageRoute(builder: (context) => const MyStatefulWidget()));
                     },
                     child: Text(AppConstants.kLogin),
                   ),
