@@ -87,7 +87,12 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(
                 height: 20,
               ),
-              const Text('Gender'),
+              const Text(
+                  'Gender',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
               Row(
                 children: [
                   AppRadio(

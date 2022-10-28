@@ -42,6 +42,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 },
               ),
             ),
+            TextButton(
+                onPressed: (){
+              Navigator.pop(context);
+            },
+                child: Text('Back')),
           ],
       ),
         ),
