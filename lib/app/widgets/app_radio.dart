@@ -2,38 +2,32 @@ import 'package:flutter/material.dart';
 
 enum Gender { on, off }
 
-class AppRadio extends StatefulWidget {
+class AppRadio extends StatelessWidget {
   final String title;
   final Gender gender;
-  const AppRadio({Key? key, required this.title, required this.gender}) : super(key: key);
+  final void Function(Gender?)? onChanged;
+  const AppRadio(
+      {Key? key,
+      required this.title,
+      required this.gender,
+      required this.onChanged})
+      : super(key: key);
 
-  @override
-  State<AppRadio> createState() => _AppRadioState();
-}
-
-class _AppRadioState extends State<AppRadio> {
-  Gender? _character;
-  bool isActive = false;
-
-  get gender => isActive ? Gender.off : Gender.on;
 
 
   @override
   Widget build(BuildContext context) {
+    Gender? character;
     return SizedBox(
       width: 160,
       child: ListTile(
-        title: Text(widget.title),
+        title: Text(title),
         trailing: Radio<Gender>(
           value: gender,
-          groupValue: _character,
-          onChanged: (Gender? value) {
-            setState(() {
-              _character = value;
-            });
-          },
+          groupValue: character,
+          onChanged: onChanged,
+    ),
         ),
-      ),
-    );
+  );
   }
 }

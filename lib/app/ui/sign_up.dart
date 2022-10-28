@@ -87,14 +87,16 @@ class _SignUpState extends State<SignUp> {
               ),
               const Text('Gender'),
               Row(
-                children: const [
+                children: [
                   AppRadio(
                     title: 'Male',
                     gender: Gender.on,
+                    onChanged: (Gender? gender) {},
                   ),
                   AppRadio(
                     title: 'Female',
                     gender: Gender.on,
+                    onChanged: (Gender? gender) {},
                   ),
                 ],
               ),
