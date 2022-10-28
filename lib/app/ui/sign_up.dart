@@ -3,7 +3,7 @@ import 'package:live_me/app/ui/select_gender.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
 import 'package:live_me/app/widgets/edit_text.dart';
-import 'package:live_me/utils/testing_pages/testing.dart';
+import 'package:live_me/utils/testing_pages/syncfusion_test.dart';
 import 'package:live_me/app/widgets/app_radio.dart';
 
 
@@ -148,7 +148,7 @@ class _SignUpState extends State<SignUp> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const MyStatefulWidget()));
+                          MaterialPageRoute(builder: (context) => const MyApp()));
                     },
                     child: Text(AppConstants.kLogin),
                   ),
