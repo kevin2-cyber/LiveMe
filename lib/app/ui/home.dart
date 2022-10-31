@@ -19,6 +19,10 @@ class Home extends StatelessWidget {
             onPressed: () {},
               icon: Image.asset(AppAssets.kMedalIcon),
           ),
+          IconButton(
+            onPressed: () {},
+            icon: Image.asset(AppAssets.kBellIcon),
+          ),
         ],
       ),
       body: Column(),

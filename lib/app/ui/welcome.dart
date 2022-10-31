@@ -80,7 +80,7 @@ class Welcome extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const SignUp()));
                 },
                 text: AppConstants.kSignUp,
-                bgColor: Colors.white,
+                bgColor: Colors.white70,
                 textColor: AppConstants.kPrimaryBlack,
               ),
             ),
