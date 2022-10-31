@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/ui/welcome.dart';
 
 class LiveMeApp extends StatelessWidget {

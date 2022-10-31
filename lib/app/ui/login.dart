@@ -1,9 +1,7 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/widgets/app_button.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 
 class Login extends StatefulWidget {
   final TextEditingController? controller;

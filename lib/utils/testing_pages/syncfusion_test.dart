@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:live_me/app/widgets/app_button.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/constants.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class MyApp extends StatefulWidget {

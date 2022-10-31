@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/login.dart';
 import 'package:live_me/app/ui/sign_up.dart';
-import 'package:live_me/utils/app_assets.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 
 class Welcome extends StatelessWidget {

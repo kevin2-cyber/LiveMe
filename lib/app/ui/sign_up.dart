@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/select_gender.dart';
 import 'package:live_me/app/widgets/app_button.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/app_radio.dart';
 
 import 'home.dart';

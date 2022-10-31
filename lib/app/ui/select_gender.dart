@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/app/widgets/app_radio.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 
 class SelectGender extends StatefulWidget {
   const SelectGender({Key? key}) : super(key: key);
