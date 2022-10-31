@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/select_gender.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 import 'package:live_me/utils/constants.dart';
-import 'package:live_me/app/widgets/edit_text.dart';
 import 'package:live_me/utils/testing_pages/syncfusion_test.dart';
 import 'package:live_me/app/widgets/app_radio.dart';
 
 
 class SignUp extends StatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+  final TextEditingController? controller;
+  const SignUp({Key? key, this.controller}) : super(key: key);
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -16,10 +16,11 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   Gender? newGender = Gender.male;
+  bool obscure = false;
 
   @override
   Widget build(BuildContext context) {
-    bool isVisible = false;
+    var kBorderRadius = BorderRadius.circular(10);
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -72,16 +73,108 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(
                 height: 70,
               ),
-              const EditText(label: 'Email', obscureText: false),
+              Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRadius,
+                        color: AppConstants.kEditTextNormal,
+                      ),
+                      child: TextFormField(
+                        controller: widget.controller,
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          focusColor: AppConstants.kEditTextNormal,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
-              EditText(label: 'Password', obscureText: isVisible),
+              Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRadius,
+                        color: AppConstants.kEditTextNormal,
+                      ),
+                      child: TextFormField(
+                        controller: widget.controller,
+                        obscureText: obscure,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          focusColor: AppConstants.kEditTextNormal,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          suffixIcon:  const Icon(Icons.remove_red_eye_rounded),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               // suffixIcon: isVisible ? IconButton(onPressed: onPressed, icon: icon) : Icons.clean_hands,),
               const SizedBox(
                 height: 20,
               ),
-              const EditText(label: 'Enter mobile number', obscureText: false),
+              Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRadius,
+                        color: AppConstants.kEditTextNormal,
+                      ),
+                      child: TextFormField(
+                        controller: widget.controller,
+                        obscureText: obscure,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          hintText: 'Enter mobile number',
+                          focusColor: AppConstants.kEditTextNormal,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          suffix: TextButton(
+                            onPressed: (){},
+                            child: const Text('Verify'),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -160,4 +253,14 @@ class _SignUpState extends State<SignUp> {
       ),
     );
   }
+
+  void signUp(bool check){
+    if(check){
+      validateData();
+    } else {
+      null;
+    }
+  }
+
+  void validateData(){}
 }

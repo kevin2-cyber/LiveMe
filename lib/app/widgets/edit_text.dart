@@ -20,6 +20,7 @@ class EditText extends StatefulWidget {
 class _EditTextState extends State<EditText> {
 
   final _formKey = GlobalKey<FormState>();
+  late TextEditingController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,7 @@ class _EditTextState extends State<EditText> {
               color: AppConstants.kEditTextNormal,
             ),
             child: TextFormField(
+              controller: _controller,
               obscureText: widget.obscureText,
               decoration: InputDecoration(
                 focusColor: AppConstants.kEditTextNormal,
@@ -48,6 +50,7 @@ class _EditTextState extends State<EditText> {
                   borderSide: BorderSide.none,
                 ),
                 suffix: widget.suffixIcon,
+                suffixIcon: const Icon(Icons.panorama_fish_eye),
               ),
             ),
           ),
