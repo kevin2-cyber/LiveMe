@@ -28,11 +28,11 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // ListView(
-          //   controller: controller,
-          //   scrollDirection: Axis.horizontal,
-          //   physics: BouncingScrollPhysics(),
-          // ),
+          ListView(
+            controller: controller,
+            scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
+          ),
         ],
       ),
     );
