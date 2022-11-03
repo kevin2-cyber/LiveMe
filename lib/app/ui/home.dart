@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [],
+        children: const <Widget>[],
       ),
     );
   }
