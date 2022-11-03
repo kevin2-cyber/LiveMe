@@ -12,7 +12,9 @@ class Home extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Image.asset(AppAssets.kCommentIcon),
         ),
         actions: [
@@ -27,13 +29,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [
-          ListView(
-            controller: controller,
-            scrollDirection: Axis.horizontal,
-            physics: BouncingScrollPhysics(),
-          ),
-        ],
+        children: [],
       ),
     );
   }
