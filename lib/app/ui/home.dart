@@ -6,6 +6,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var controller = ScrollController();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -25,7 +26,15 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(),
+      body: Column(
+        children: [
+          // ListView(
+          //   controller: controller,
+          //   scrollDirection: Axis.horizontal,
+          //   physics: BouncingScrollPhysics(),
+          // ),
+        ],
+      ),
     );
   }
 }
