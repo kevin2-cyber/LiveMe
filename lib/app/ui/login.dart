@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/widgets/app_button.dart';
-import 'package:live_me/app/widgets/edit_text.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  final TextEditingController? controller;
+  const Login({Key? key, this.controller}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+
+  bool obscure = false;
 
   @override
   Widget build(BuildContext context) {
+    var kBorderRadius = BorderRadius.circular(10);
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -60,11 +69,69 @@ class Login extends StatelessWidget {
               const SizedBox(
                 height: 70,
               ),
-              const EditText(label: 'Email', obscureText: false),
+              Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRadius,
+                        color: AppConstants.kEditTextNormal,
+                      ),
+                      child: TextFormField(
+                        controller: widget.controller,
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          focusColor: AppConstants.kEditTextNormal,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
-              const EditText(label: 'Password', obscureText: true),
+              Form(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRadius,
+                        color: AppConstants.kEditTextNormal,
+                      ),
+                      child: TextFormField(
+                        controller: widget.controller,
+                        obscureText: obscure,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          focusColor: AppConstants.kEditTextNormal,
+                          contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: kBorderRadius,
+                            borderSide: BorderSide.none,
+                          ),
+                          suffixIcon: obscure ? const Icon(Icons.remove_red_eye_rounded) : const Icon(Icons.add),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 10,
               ),
@@ -105,4 +172,14 @@ class Login extends StatelessWidget {
       ),
     );
   }
+
+  void login(bool isLoggedIn){
+    if(isLoggedIn) {
+      validateData();
+    } else {
+      null;
+    }
+  }
+
+  void validateData(){}
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/ui/login.dart';
 import 'package:live_me/app/ui/sign_up.dart';
-import 'package:live_me/utils/app_assets.dart';
-import 'package:live_me/utils/constants.dart';
+import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/app_button.dart';
 
 class Welcome extends StatelessWidget {
@@ -20,8 +19,12 @@ class Welcome extends StatelessWidget {
             fit: BoxFit.fill,
           ),
         ),
-        child: Stack(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.3,
+            ),
             Center(
               child: Text(
                 AppConstants.kAppName,
@@ -32,33 +35,29 @@ class Welcome extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              top: 500,
-              left: 100,
-              right: 100,
-              child: Container(
-                width: 90,
-                height: 30,
-                padding: const EdgeInsets.only(top: 2.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.black,
-                ),
-                child: Text(
-                  AppConstants.kStreaming,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 19,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
-                  ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: 30,
+              padding: const EdgeInsets.only(top: 2.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.black,
+              ),
+              child: Text(
+                AppConstants.kStreaming,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
                 ),
               ),
             ),
-            Positioned(
-              top: 620,
-              left: 30,
-              right: 30,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: AppButton(
                 onTapped: () {
                   Navigator.of(context).push(
@@ -69,17 +68,18 @@ class Welcome extends StatelessWidget {
                 textColor: Colors.white,
               ),
             ),
-            Positioned(
-              top: 680,
-              left: 30,
-              right: 30,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: AppButton(
                 onTapped: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => const SignUp()));
                 },
                 text: AppConstants.kSignUp,
-                bgColor: Colors.white,
+                bgColor: Colors.white70,
                 textColor: AppConstants.kPrimaryBlack,
               ),
             ),
