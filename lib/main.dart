@@ -18,7 +18,5 @@ void main() {
         ),
       );
 
-  runApp(
-      const LiveMeApp()
-  );
+  runApp(const LiveMeApp());
 }
