@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:live_me/app/app.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
 
   ErrorWidget.builder = (FlutterErrorDetails details) => Material(
         color: Colors.white70,
@@ -17,6 +16,8 @@ void main() {
           ),
         ),
       );
+
+  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const LiveMeApp());
 }
