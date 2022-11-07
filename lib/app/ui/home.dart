@@ -31,6 +31,31 @@ class Home extends StatelessWidget {
       body: Column(
         children: const <Widget>[],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            label: 'Live',
+              icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'Videos',
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'House',
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'Maison',
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'Him',
+            icon: Icon(Icons.home),
+          ),
+        ],
+      ),
     );
   }
 }
