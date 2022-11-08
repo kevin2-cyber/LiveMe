@@ -8,8 +8,11 @@ class LiveFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         LiveMeAppBar(appBarColor: Colors.transparent),
+        Row(
+          children: [],
+        ),
       ],
     );
   }
