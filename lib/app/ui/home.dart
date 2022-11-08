@@ -38,15 +38,15 @@ class _HomeState extends State<Home> {
         items:  [
           BottomNavigationBarItem(
             label: 'Live',
-              icon: Image.asset(AppAssets.kHome),
+              icon: Image.asset(AppAssets.kHomeIcon),
           ),
           BottomNavigationBarItem(
             label: 'Videos',
-            icon: Image.asset(AppAssets.kVideo),
+            icon: Image.asset(AppAssets.kVideoIcon),
           ),
           BottomNavigationBarItem(
             label: 'Camera',
-            icon: Image.asset(AppAssets.kCamera),
+            icon: Image.asset(AppAssets.kCameraICon),
           ),
           BottomNavigationBarItem(
             label: 'Feed',
