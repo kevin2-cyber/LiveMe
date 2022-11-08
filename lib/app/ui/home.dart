@@ -1,12 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+
+  static final List<Widget> _widgetOptions = [
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+    Container(
+      color: Colors.blueGrey,
+    ),
+    Container(
+      color: Colors.lightBlueAccent,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var controller = ScrollController();
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -28,13 +55,12 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: const <Widget>[],
+      body: Container(
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
+        items:  [
           BottomNavigationBarItem(
-            backgroundColor: Colors.black,
             label: 'Live',
               icon: Icon(Icons.home),
           ),
@@ -43,8 +69,18 @@ class Home extends StatelessWidget {
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            label: 'House',
-            icon: Icon(Icons.home),
+            label: 'Camera',
+            icon: Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(50)),
+                color: Colors.black,
+              ),
+              child: Icon(
+                  Icons.camera_alt,
+                color: Colors.white,
+              ),
+            ),
           ),
           BottomNavigationBarItem(
             label: 'Maison',
@@ -55,6 +91,9 @@ class Home extends StatelessWidget {
             icon: Icon(Icons.home),
           ),
         ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.black38,
+        onTap: _onItemTapped,
       ),
     );
   }
