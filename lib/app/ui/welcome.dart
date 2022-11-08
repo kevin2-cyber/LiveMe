@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:live_me/app/ui/login.dart';
-import 'package:live_me/app/ui/sign_up.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/widgets/app_button.dart';
+import 'package:live_me/app/ui/screens.dart';
+import 'package:live_me/app/widgets/app.button.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
