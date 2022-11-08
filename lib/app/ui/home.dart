@@ -36,13 +36,13 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items:  [
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             label: 'Live',
-              icon: Icon(Icons.home),
+              icon: Image.asset(AppAssets.kHome),
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             label: 'Videos',
-            icon: Icon(Icons.play_circle_outline),
+            icon: Image.asset(AppAssets.kVideo),
           ),
           BottomNavigationBarItem(
             label: 'Camera',

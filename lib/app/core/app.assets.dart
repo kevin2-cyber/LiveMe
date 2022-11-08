@@ -7,4 +7,6 @@ class AppAssets{
   static String kNewsIcon = 'assets/icons/news.png';
   static String kProfileIcon = 'assets/icons/profile.png';
   static String kCamera = 'assets/icons/camera.png';
+  static String kVideo = 'assets/icons/play.png';
+  static String kHome = 'assets/icons/home.png';
 }
