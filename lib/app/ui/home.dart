@@ -60,33 +60,33 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items:  [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Live',
               icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Videos',
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
             label: 'Camera',
             icon: Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(50)),
                 color: Colors.black,
               ),
-              child: Icon(
+              child: const Icon(
                   Icons.camera_alt,
                 color: Colors.white,
               ),
             ),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Maison',
             icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Him',
             icon: Icon(Icons.home),
           ),
