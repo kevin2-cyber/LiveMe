@@ -8,4 +8,9 @@ class AppAssets{
   static String kCameraICon = 'assets/icons/camera.png';
   static String kVideoIcon = 'assets/icons/play.png';
   static String kHomeIcon = 'assets/icons/home.png';
+  static String kEventIcon = 'assets/icons/event.png';
+  static String kFireIcon = 'assets/icons/fire.png';
+  static String kLiveIcon = 'assets/icons/live_tv.png';
+  static String kMusicIcon = 'assets/icons/queue_music.png';
+  static String kAwardIcon = 'assets/icons/award.png';
 }
