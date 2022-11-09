@@ -9,41 +9,46 @@ class LiveFragment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Card> cards = const [
+    List<Widget> cards = [
       Card(
         elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text('All'),
-        ),
+        child: Container(
+          height: 40,
+            width: 60,
+            color: Colors.black54,
+            child: Text('All')),
       ),
       Card(
         elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text('Category 1'),
-        ),
+        child: Container(
+            height: 40,
+            width: 60,
+            color: Colors.black54,
+            child: const Text('Category 1')),
       ),
       Card(
         elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text('Category 2'),
-        ),
+        child: Container(
+            height: 40,
+            width: 60,
+            color: Colors.black54,
+            child: const Text('Category 2')),
       ),
       Card(
         elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text('Category 3'),
-        ),
+        child: Container(
+            height: 40,
+            width: 60,
+            color: Colors.black54,
+            child: const Text('Category 3')),
       ),
       Card(
         elevation: 1,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text('Category 4'),
-        ),
+        child: Container(
+            height: 40,
+            width: 60,
+            color: Colors.black54,
+            child: const Text('Category 4')),
       ),
     ];
 
@@ -86,7 +91,7 @@ class LiveFragment extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            height: 240,
+            height: 139,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               color: Colors.black,
@@ -95,17 +100,17 @@ class LiveFragment extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  top: 100,
+                  top: 20,
                   left: 310,
                   child: Image.asset(
-                      AppAssets.kAwardIcon,
+                    AppAssets.kAwardIcon,
                   ),
                 ),
                 const Positioned(
-                  top: 50,
+                  top: 30,
                   left: 30,
                   child: Text(
-                      'Win \$10!',
+                    'Win \$10!',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 25,
@@ -113,7 +118,7 @@ class LiveFragment extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  top: 90,
+                  top: 60,
                   left: 30,
                   child: Text(
                     'Today\'s highest token balance wins!',
@@ -124,7 +129,7 @@ class LiveFragment extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                  top: 110,
+                  top: 90,
                   left: 30,
                   child: Text(
                     'Contest Ends in: 12h 18m',
@@ -138,12 +143,16 @@ class LiveFragment extends StatelessWidget {
             ),
           ),
         ),
-        ListView.builder(
+        ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: cards.length,
           itemBuilder: (BuildContext context, int index) {
-            return cards;
+            return Container(
+              color: Colors.black54,
+                child: cards.elementAt(index),
+            );
           },
+          separatorBuilder: (BuildContext context, int index) => const Divider(),
         ),
       ],
     );
