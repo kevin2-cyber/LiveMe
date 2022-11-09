@@ -142,8 +142,7 @@ class LiveFragment extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: cards.length,
           itemBuilder: (BuildContext context, int index) {
-            return null;
-
+            return cards;
           },
         ),
       ],
