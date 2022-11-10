@@ -108,17 +108,17 @@ class LiveFragment extends StatelessWidget {
             ),
           ),
         ),
-        ListView.separated(
-          scrollDirection: Axis.horizontal,
-          itemCount: cards.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Container(
-              color: Colors.black54,
-                child: cards.elementAt(index),
-            );
-          },
-          separatorBuilder: (BuildContext context, int index) => const Divider(),
-        ),
+        // ListView.separated(
+        //   scrollDirection: Axis.horizontal,
+        //   itemCount: cards.length,
+        //   itemBuilder: (BuildContext context, int index) {
+        //     return Container(
+        //       color: Colors.black54,
+        //         child: cards.elementAt(index),
+        //     );
+        //   },
+        //   separatorBuilder: (BuildContext context, int index) => const Divider(),
+        // ),
       ],
     );
   }
