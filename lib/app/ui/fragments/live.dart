@@ -10,46 +10,11 @@ class LiveFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> cards = [
-      Card(
-        elevation: 1,
-        child: Container(
-          height: 40,
-            width: 60,
-            color: Colors.black54,
-            child: Text('All')),
-      ),
-      Card(
-        elevation: 1,
-        child: Container(
-            height: 40,
-            width: 60,
-            color: Colors.black54,
-            child: const Text('Category 1')),
-      ),
-      Card(
-        elevation: 1,
-        child: Container(
-            height: 40,
-            width: 60,
-            color: Colors.black54,
-            child: const Text('Category 2')),
-      ),
-      Card(
-        elevation: 1,
-        child: Container(
-            height: 40,
-            width: 60,
-            color: Colors.black54,
-            child: const Text('Category 3')),
-      ),
-      Card(
-        elevation: 1,
-        child: Container(
-            height: 40,
-            width: 60,
-            color: Colors.black54,
-            child: const Text('Category 4')),
-      ),
+      const Text('All'),
+      const Text('Category 1'),
+      const Text('Category 2'),
+      const Text('Category 3'),
+      const Text('Category 4'),
     ];
 
     return Column(
