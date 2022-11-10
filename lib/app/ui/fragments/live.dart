@@ -9,12 +9,12 @@ class LiveFragment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> cards = [
-      const Text('All'),
-      const Text('Category 1'),
-      const Text('Category 2'),
-      const Text('Category 3'),
-      const Text('Category 4'),
+    List<String> cards = [
+      'All',
+      'Category 1',
+      'Category 2',
+      'Category 3',
+      'Category 4',
     ];
 
     return Column(
@@ -108,17 +108,7 @@ class LiveFragment extends StatelessWidget {
             ),
           ),
         ),
-        // ListView.separated(
-        //   scrollDirection: Axis.horizontal,
-        //   itemCount: cards.length,
-        //   itemBuilder: (BuildContext context, int index) {
-        //     return Container(
-        //       color: Colors.black54,
-        //         child: cards.elementAt(index),
-        //     );
-        //   },
-        //   separatorBuilder: (BuildContext context, int index) => const Divider(),
-        // ),
+
       ],
     );
   }
