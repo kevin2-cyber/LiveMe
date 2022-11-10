@@ -1,5 +1,5 @@
 class AppAssets{
-  static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
+  // Icons
   static String kCommentIcon = 'assets/icons/comment.png';
   static String kMedalIcon = 'assets/icons/medal.png';
   static String kBellIcon = 'assets/icons/bell.png';
@@ -13,4 +13,13 @@ class AppAssets{
   static String kLiveIcon = 'assets/icons/live_tv.png';
   static String kMusicIcon = 'assets/icons/queue_music.png';
   static String kAwardIcon = 'assets/icons/award.png';
+
+  // Images
+  static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
+  static String kCardImageUn = 'assets/images/image_un.png';
+  static String kCardImageD = 'assets/images/image_d.png';
+  static String kCardImageT = 'assets/images/image_t.png';
+  static String kCardImageQ = 'assets/images/image_q.png';
+  static String kCardImageC = 'assets/images/image_c.png';
+  static String kCardImageS = 'assets/images/image_s.png';
 }
