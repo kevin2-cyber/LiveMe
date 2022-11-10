@@ -3,7 +3,6 @@ import 'package:live_me/app/ui/select.gender.dart';
 import 'package:live_me/app/widgets/app.button.dart';
 import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/app.radio.dart';
-import 'package:live_me/utils/testing_pages/lists.dart';
 
 import 'home.dart';
 
@@ -243,7 +242,7 @@ class _SignUpState extends State<SignUp> {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const ListViewSample()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     },
                     child: Text(AppConstants.kLogin),
                   ),
