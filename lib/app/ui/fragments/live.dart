@@ -141,47 +141,47 @@ class LiveFragment extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),)
+                  image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageQ),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageQ),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageC),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageC),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageS),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageS),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),)
+                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),),
                 ),
               ),
             ],
