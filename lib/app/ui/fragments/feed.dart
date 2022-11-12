@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:live_me/app/widgets/app.bar.dart';
 
 import '../../core/app.assets.dart';
 import '../../widgets/scroll.card.dart';
