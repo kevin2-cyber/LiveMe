@@ -3,6 +3,7 @@ import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/activity_card.dart';
 
 import '../../widgets/app.bar.dart';
+import '../../widgets/grid.view.card.dart';
 
 class LiveFragment extends StatelessWidget {
   const LiveFragment({Key? key}) : super(key: key);
@@ -120,7 +121,7 @@ class LiveFragment extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: categories.map((category) {
               return GestureDetector(
-                onTap: (){},
+                onTap: () {},
                 child: Card(
                   elevation: 0,
                   child: Text(category),
@@ -134,54 +135,63 @@ class LiveFragment extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: GridView.count(
             primary: false,
-            padding: const EdgeInsets.all(4),
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
             crossAxisCount: 2,
             children: [
+              GridViewCard(
+                cardImage: AppAssets.kCardImageUn,
+                cardTitle: 'Sophie Owens',
+                country: 'United States',
+              ),
+              GridViewCard(
+                cardImage: AppAssets.kCardImageD,
+                cardTitle: 'Leonela Cox',
+                country: 'United States',
+              ),
+              GridViewCard(
+                cardImage: AppAssets.kCardImageT,
+                cardTitle: 'Omid Armin',
+                country: 'United States',
+              ),
+              GridViewCard(
+                cardImage: AppAssets.kCardImageQ,
+                cardTitle: 'Frankie Cordoba',
+                country: 'United States',
+              ),
               Container(
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kCardImageC),
+                  ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kCardImageS),
+                  ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kCardImageUn),
+                  ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageQ),),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kCardImageD),
+                  ),
                 ),
               ),
               Container(
                 decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageC),),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageS),),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageUn),),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageD),),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage(AppAssets.kCardImageT),),
+                  image: DecorationImage(
+                    image: AssetImage(AppAssets.kCardImageT),
+                  ),
                 ),
               ),
             ],
