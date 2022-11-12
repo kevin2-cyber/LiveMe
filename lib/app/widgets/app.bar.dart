@@ -10,6 +10,7 @@ class LiveMeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: appBarColor,
+      elevation: 0,
       leading: IconButton(
             onPressed: (){
               Navigator.pop(context);
