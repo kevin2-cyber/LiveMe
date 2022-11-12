@@ -8,32 +8,25 @@ class LiveMeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        color: appBarColor,
-        child: Row(
-          children: [
-            IconButton(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                icon: Image.asset(AppAssets.kCommentIcon, color: iconColor,),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.62,
-            ),
-            IconButton(
-                onPressed: (){},
-                icon: Image.asset(AppAssets.kMedalIcon, color: iconColor,),
-            ),
-            IconButton(
-                onPressed: (){},
-                icon: Image.asset(AppAssets.kBellIcon, color: iconColor,),
-            ),
-          ],
+    return AppBar(
+      backgroundColor: appBarColor,
+      elevation: 0,
+      leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Image.asset(AppAssets.kCommentIcon, color: iconColor,),
         ),
-      ),
+      actions: [
+        IconButton(
+          onPressed: (){},
+          icon: Image.asset(AppAssets.kMedalIcon, color: iconColor,),
+        ),
+        IconButton(
+          onPressed: (){},
+          icon: Image.asset(AppAssets.kBellIcon, color: iconColor,),
+        ),
+      ],
     );
   }
 }

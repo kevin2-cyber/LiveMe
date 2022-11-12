@@ -13,6 +13,8 @@ class AppAssets{
   static String kLiveIcon = 'assets/icons/live_tv.png';
   static String kMusicIcon = 'assets/icons/queue_music.png';
   static String kAwardIcon = 'assets/icons/award.png';
+  static String kHeartIcon = 'assets/icons/heart.png';
+  static String kShareIcon = 'assets/icons/share.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
@@ -22,4 +24,8 @@ class AppAssets{
   static String kCardImageQ = 'assets/images/image_q.png';
   static String kCardImageC = 'assets/images/image_c.png';
   static String kCardImageS = 'assets/images/image_s.png';
+  static String kSinging = 'assets/images/singing.png';
+
+  // Avatars
+  static String kJumpAvatar = 'assets/images/jump.png';
 }

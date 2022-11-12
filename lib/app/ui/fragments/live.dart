@@ -23,7 +23,7 @@ class LiveFragment extends StatelessWidget {
 
     return Column(
       children: [
-        const LiveMeAppBar(appBarColor: Colors.transparent),
+        const LiveMeAppBar(appBarColor: Colors.white),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
