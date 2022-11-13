@@ -12,7 +12,7 @@ class FeedFragment extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.black,
-        leading: Image.asset(AppAssets.kCommentIcon, color: Colors.white,),
+        leading: Image.asset(AppAssets.kCommentDarkIcon, color: Colors.white,),
         actions: [
           IconButton(
             onPressed: (){},

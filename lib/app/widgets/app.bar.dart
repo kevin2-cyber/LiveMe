@@ -15,7 +15,7 @@ class LiveMeAppBar extends StatelessWidget {
             onPressed: (){
               Navigator.pop(context);
             },
-            icon: Image.asset(AppAssets.kCommentIcon, color: iconColor,),
+            icon: Image.asset(AppAssets.kCommentDarkIcon, color: iconColor,),
         ),
       actions: [
         IconButton(
