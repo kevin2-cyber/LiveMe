@@ -12,12 +12,7 @@ class FeedFragment extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.black,
-        leading: IconButton(
-          onPressed: (){
-            Navigator.pop(context);
-          },
-          icon: Image.asset(AppAssets.kCommentIcon, color: Colors.white,),
-        ),
+        leading: Image.asset(AppAssets.kCommentIcon, color: Colors.white,),
         actions: [
           IconButton(
             onPressed: (){},
@@ -28,11 +23,10 @@ class FeedFragment extends StatelessWidget {
             icon: Image.asset(AppAssets.kBellIcon, color: Colors.white,),
           ),
         ],
-      ),
+        ),
       body: SingleChildScrollView(
         child: Column(
           children: const [
-
             ScrollCard(),
             ScrollCard(),
             ScrollCard(),
