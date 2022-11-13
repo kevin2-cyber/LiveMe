@@ -76,7 +76,7 @@ class ScrollCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(AppAssets.kHeartIcon),
+                    Image.asset(AppAssets.kHeartDarkIcon),
                     const SizedBox(
                       width: 5,
                     ),
@@ -85,7 +85,7 @@ class ScrollCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Image.asset(AppAssets.kCommentIcon),
+                    Image.asset(AppAssets.kCommentDarkIcon),
                     const SizedBox(
                       width: 5,
                     ),
@@ -94,7 +94,7 @@ class ScrollCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Image.asset(AppAssets.kShareIcon),
+                    Image.asset(AppAssets.kShareDarkIcon),
                     const SizedBox(
                       width: 5,
                     ),

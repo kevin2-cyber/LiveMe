@@ -1,6 +1,7 @@
 class AppAssets{
   // Icons
-  static String kCommentIcon = 'assets/icons/comment.png';
+  static String kCommentDarkIcon = 'assets/icons/comment_dark.png';
+  static String kCommentLightIcon = 'assets/icons/comment_light.png';
   static String kMedalIcon = 'assets/icons/medal.png';
   static String kBellIcon = 'assets/icons/bell.png';
   static String kNewsIcon = 'assets/icons/news.png';
@@ -13,8 +14,11 @@ class AppAssets{
   static String kLiveIcon = 'assets/icons/live_tv.png';
   static String kMusicIcon = 'assets/icons/queue_music.png';
   static String kAwardIcon = 'assets/icons/award.png';
-  static String kHeartIcon = 'assets/icons/heart.png';
-  static String kShareIcon = 'assets/icons/share.png';
+  static String kHeartDarkIcon = 'assets/icons/heart_dark.png';
+  static String kHeartLightIcon = 'assets/icons/heart_light.png';
+  static String kShareDarkIcon = 'assets/icons/share_dark.png';
+  static String kShareLightIcon = 'assets/icons/share_light.png';
+  static String kPlayBtn = 'assets/icons/play_btn.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
@@ -28,4 +32,10 @@ class AppAssets{
 
   // Avatars
   static String kJumpAvatar = 'assets/images/jump.png';
+
+  // Videos
+static String kVideoUn = 'assets/images/video_un.png';
+static String kVideoD = 'assets/images/video_d.png';
+static String kVideoT = 'assets/images/video_t.png';
+static String kVideoQ = 'assets/images/video_q.png';
 }

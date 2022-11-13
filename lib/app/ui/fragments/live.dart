@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/widgets/activity_card.dart';
+import 'package:live_me/app/widgets/activity.card.dart';
 
 import '../../widgets/app.bar.dart';
 import '../../widgets/grid.view.card.dart';
