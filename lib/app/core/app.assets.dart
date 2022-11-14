@@ -32,10 +32,11 @@ class AppAssets{
 
   // Avatars
   static String kJumpAvatar = 'assets/images/jump.png';
+  static String kProfileAvatar = 'assets/images/profile_image_un.png';
 
   // Videos
-static String kVideoUn = 'assets/images/video_un.png';
-static String kVideoD = 'assets/images/video_d.png';
-static String kVideoT = 'assets/images/video_t.png';
-static String kVideoQ = 'assets/images/video_q.png';
+  static String kVideoUn = 'assets/images/video_un.png';
+  static String kVideoD = 'assets/images/video_d.png';
+  static String kVideoT = 'assets/images/video_t.png';
+  static String kVideoQ = 'assets/images/video_q.png';
 }
