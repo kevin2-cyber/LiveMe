@@ -101,35 +101,40 @@ class ProfileFragment extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children:  [
-              ListTile(
-                title: Text('207'),
-                subtitle: Text('Followers'),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.1,
-              ),
-              ListTile(
-                title: Text('27'),
-                subtitle: Text('Following'),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.1,
-              ),
-              ListTile(
-                title: Text('2107'),
-                subtitle: Text('Views'),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.1,
-              ),
-              ListTile(
-                title: Text('100'),
-                subtitle: Text('Likes'),
-              ),
-            ],
+          Container(
+            constraints: BoxConstraints(
+              maxWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:  [
+                const ListTile(
+                  title: Text('207'),
+                  subtitle: Text('Followers'),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.1,
+                ),
+                const ListTile(
+                  title: Text('27'),
+                  subtitle: Text('Following'),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.1,
+                ),
+                const ListTile(
+                  title: Text('2107'),
+                  subtitle: Text('Views'),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.1,
+                ),
+                const ListTile(
+                  title: Text('100'),
+                  subtitle: Text('Likes'),
+                ),
+              ],
+            ),
           )
         ],
       ),
