@@ -14,7 +14,7 @@ class LiveMeApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       title: AppConstants.kAppName,
       darkTheme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.poppinsTextTheme(),
+        textTheme: GoogleFonts.playTextTheme(),
         primaryColorDark: AppConstants.kPrimaryBlack
       ),
       theme: ThemeData.light().copyWith(
