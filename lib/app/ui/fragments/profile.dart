@@ -102,40 +102,90 @@ class ProfileFragment extends StatelessWidget {
             ],
           ),
           Container(
-            constraints: BoxConstraints(
-              maxWidth: MediaQuery.of(context).size.width,
-            ),
+            padding: const EdgeInsets.only(left: 40, right: 40, top: 10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children:  [
-                const ListTile(
-                  title: Text('207'),
-                  subtitle: Text('Followers'),
+                Column(
+                  children:  const [
+                    Text(
+                        '207',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                        'Followers',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w100
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.1,
                 ),
-                const ListTile(
-                  title: Text('27'),
-                  subtitle: Text('Following'),
+                 Column(
+                   children: const [
+                     Text(
+                         '27',
+                       style: TextStyle(
+                         fontSize: 20,
+                       ),
+                     ),
+                     Text(
+                         'Following',
+                       style: TextStyle(
+                         fontSize: 10,
+                         fontWeight: FontWeight.w100,
+                       ),
+                     ),
+                   ],
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.1,
                 ),
-                const ListTile(
-                  title: Text('2107'),
-                  subtitle: Text('Views'),
+                Column(
+                  children: const [
+                    Text(
+                        '2107',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                        'Views',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.1,
                 ),
-                const ListTile(
-                  title: Text('100'),
-                  subtitle: Text('Likes'),
+                Column(
+                  children: const [
+                    Text(
+                        '100',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                        'Likes',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
