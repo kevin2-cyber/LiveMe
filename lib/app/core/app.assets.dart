@@ -19,6 +19,11 @@ class AppAssets{
   static String kShareDarkIcon = 'assets/icons/share_dark.png';
   static String kShareLightIcon = 'assets/icons/share_light.png';
   static String kPlayBtn = 'assets/icons/play_btn.png';
+  static String kCalendarIcon = 'assets/icons/calendar.png';
+  static String kEditIcon = 'assets/icons/edit.png';
+  static String kSecurityIcon = 'assets/icons/security.png';
+  static String kSettingsIcon = 'assets/icons/settings.png';
+  static String kSharingIcon = 'assets/icons/sharing.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
