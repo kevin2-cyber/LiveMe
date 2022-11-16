@@ -19,6 +19,7 @@ class VideoFragment extends StatelessWidget {
           ),
         ),
         automaticallyImplyLeading: false,
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
