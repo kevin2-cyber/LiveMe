@@ -189,7 +189,9 @@ class EditProfile extends StatelessWidget {
             ),
             kSpacingX,
             AppButton(
-                onTapped: () {},
+                onTapped: () {
+                  Navigator.pop(context);
+                },
                 text: 'Save',
                 bgColor: AppConstants.kPrimaryBlack,
                 textColor: AppConstants.kPrimaryWhite,
