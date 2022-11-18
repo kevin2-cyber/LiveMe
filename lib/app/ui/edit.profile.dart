@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/widgets/app.button.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var kSpacingX = SizedBox(
+      height: AppConstants.sizeConfig(context, 0.01).height,
+    );
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 100,
         backgroundColor: Colors.white,
         title: const Text(
-            'Edit Profile',
+          'Edit Profile',
           style: TextStyle(
             color: Colors.black,
           ),
         ),
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Row(
             children: const [
               Icon(
-                  Icons.arrow_back_ios_new,
+                Icons.arrow_back_ios_new,
                 color: Colors.blue,
               ),
               Text(
-                  'Back',
+                'Back',
                 style: TextStyle(
                   color: Colors.blue,
                 ),
@@ -37,7 +41,7 @@ class EditProfile extends StatelessWidget {
         ),
         actions: [
           GestureDetector(
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
             child: Padding(
@@ -48,7 +52,7 @@ class EditProfile extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                      'Cancel',
+                    'Cancel',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.blue,
@@ -63,13 +67,12 @@ class EditProfile extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -82,10 +85,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -98,10 +102,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -114,10 +119,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -130,10 +136,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -146,10 +153,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -162,10 +170,11 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
             ),
+            kSpacingX,
             Container(
               width: AppConstants.sizeConfig(context, 1).width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 color: AppConstants.kEditTextNormal,
               ),
               child: TextFormField(
@@ -177,6 +186,13 @@ class EditProfile extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            kSpacingX,
+            AppButton(
+                onTapped: () {},
+                text: 'Save',
+                bgColor: AppConstants.kPrimaryBlack,
+                textColor: AppConstants.kPrimaryWhite,
             ),
           ],
         ),
