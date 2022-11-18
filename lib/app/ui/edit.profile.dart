@@ -13,6 +13,7 @@ class EditProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 100,
+        elevation: 1,
         backgroundColor: Colors.white,
         title: const Text(
           'Edit Profile',
