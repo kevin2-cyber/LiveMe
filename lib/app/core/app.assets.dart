@@ -34,6 +34,10 @@ class AppAssets{
   static String kCardImageC = 'assets/images/image_c.png';
   static String kCardImageS = 'assets/images/image_s.png';
   static String kSinging = 'assets/images/singing.png';
+  static String kDanceUn = 'assets/images/image_se.png';
+  static String kDanceD = 'assets/images/image_h.png';
+  static String kDanceT = 'assets/images/dancing.png';
+  static String kDanceQ = 'assets/images/dance.png';
 
   // Avatars
   static String kJumpAvatar = 'assets/images/jump.png';
