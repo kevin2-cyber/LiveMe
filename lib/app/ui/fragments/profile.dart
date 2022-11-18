@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/ui/edit.profile.dart';
 import 'package:live_me/app/widgets/icon.card.dart';
 
 import '../../widgets/dance.grid.view.card.dart';
@@ -203,11 +204,33 @@ class ProfileFragment extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconCard(title: 'Stream\nSchedule', icon: AppAssets.kCalendarIcon),
-              IconCard(title: 'Edit Profile', icon: AppAssets.kEditIcon),
-              IconCard(title: 'Share', icon: AppAssets.kSharingIcon),
-              IconCard(title: 'Guardian', icon: AppAssets.kSecurityIcon),
-              IconCard(title: 'Settings', icon: AppAssets.kSettingsIcon),
+              IconCard(
+                  title: 'Stream\nSchedule',
+                  icon: AppAssets.kCalendarIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Edit Profile',
+                  icon: AppAssets.kEditIcon,
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile()));
+                  },
+              ),
+              IconCard(
+                  title: 'Share',
+                  icon: AppAssets.kSharingIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Guardian',
+                  icon: AppAssets.kSecurityIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Settings',
+                  icon: AppAssets.kSettingsIcon,
+                  onTap: (){},
+              ),
             ],
           ),
           SizedBox(
