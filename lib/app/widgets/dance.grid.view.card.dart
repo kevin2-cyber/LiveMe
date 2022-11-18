@@ -26,7 +26,7 @@ class DanceGridViewCard extends StatelessWidget {
               SizedBox(
                 width: AppConstants.sizeConfig(context, 0.02).width,
               ),
-              Text('1125'),
+              const Text('1125'),
               SizedBox(
                 width: AppConstants.sizeConfig(context, 0.02).width,
               ),
@@ -34,7 +34,7 @@ class DanceGridViewCard extends StatelessWidget {
               SizedBox(
                 width: AppConstants.sizeConfig(context, 0.02).width,
               ),
-              Text('125'),
+              const Text('125'),
             ],
           ),
         ],
