@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/core/core.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -58,6 +59,127 @@ class EditProfile extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('username'),
+                  hintText: 'username',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Full Name'),
+                  hintText: 'John Doe',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Bio'),
+                  hintText: 'Bio',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Website'),
+                  hintText: 'Website',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Gender'),
+                  hintText: 'Male',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('DOB'),
+                  hintText: 'DOB',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Email'),
+                  hintText: 'Email',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
