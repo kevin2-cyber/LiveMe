@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/ui/edit.profile.dart';
 import 'package:live_me/app/widgets/icon.card.dart';
+
+import '../../widgets/dance.grid.view.card.dart';
 
 class ProfileFragment extends StatelessWidget {
   const ProfileFragment({Key? key}) : super(key: key);
@@ -201,11 +204,33 @@ class ProfileFragment extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              IconCard(title: 'Stream\nSchedule', icon: AppAssets.kCalendarIcon),
-              IconCard(title: 'Edit Profile', icon: AppAssets.kEditIcon),
-              IconCard(title: 'Share', icon: AppAssets.kSharingIcon),
-              IconCard(title: 'Guardian', icon: AppAssets.kSecurityIcon),
-              IconCard(title: 'Settings', icon: AppAssets.kSettingsIcon),
+              IconCard(
+                  title: 'Stream\nSchedule',
+                  icon: AppAssets.kCalendarIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Edit Profile',
+                  icon: AppAssets.kEditIcon,
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile()));
+                  },
+              ),
+              IconCard(
+                  title: 'Share',
+                  icon: AppAssets.kSharingIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Guardian',
+                  icon: AppAssets.kSecurityIcon,
+                  onTap: (){},
+              ),
+              IconCard(
+                  title: 'Settings',
+                  icon: AppAssets.kSettingsIcon,
+                  onTap: (){},
+              ),
             ],
           ),
           SizedBox(
@@ -238,8 +263,46 @@ class ProfileFragment extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: AppConstants.sizeConfig(context, 0.3).height,
+            width: AppConstants.sizeConfig(context, 1).width,
+            child: GridView.count(
+              crossAxisCount: 2,
+              primary: false,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children:  [
+                DanceGridViewCard(
+                  image: AppAssets.kDanceUn,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceD,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceT,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceQ,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceUn,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceD,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceT,
+                ),
+                DanceGridViewCard(
+                  image: AppAssets.kDanceQ,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
 }
+
+

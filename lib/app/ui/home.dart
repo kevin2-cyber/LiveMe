@@ -34,32 +34,53 @@ class _HomeState extends State<Home> {
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items:  [
-          BottomNavigationBarItem(
-            label: 'Live',
-              icon: Image.asset(AppAssets.kHomeIcon),
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30),
+            topLeft: Radius.circular(30),
           ),
-          BottomNavigationBarItem(
-            label: 'Videos',
-            icon: Image.asset(AppAssets.kVideoIcon),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black38,
+              spreadRadius: 0,
+              blurRadius: 10,
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topRight: Radius.circular(30),
+            topLeft: Radius.circular(30),
           ),
-          BottomNavigationBarItem(
-            label: 'Camera',
-            icon: Image.asset(AppAssets.kCameraICon),
+          child: BottomNavigationBar(
+            items:  [
+              BottomNavigationBarItem(
+                label: 'Live',
+                  icon: Image.asset(AppAssets.kHomeIcon),
+              ),
+              BottomNavigationBarItem(
+                label: 'Videos',
+                icon: Image.asset(AppAssets.kVideoIcon),
+              ),
+              BottomNavigationBarItem(
+                label: 'Camera',
+                icon: Image.asset(AppAssets.kCameraICon),
+              ),
+              BottomNavigationBarItem(
+                label: 'Feed',
+                icon: Image.asset(AppAssets.kNewsIcon),
+              ),
+              BottomNavigationBarItem(
+                label: 'Profile',
+                icon: Image.asset(AppAssets.kProfileIcon),
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            selectedItemColor: Colors.black,
+            onTap: _onItemTapped,
           ),
-          BottomNavigationBarItem(
-            label: 'Feed',
-            icon: Image.asset(AppAssets.kNewsIcon),
-          ),
-          BottomNavigationBarItem(
-            label: 'Profile',
-            icon: Image.asset(AppAssets.kProfileIcon),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        onTap: _onItemTapped,
+        ),
       ),
     );
   }
