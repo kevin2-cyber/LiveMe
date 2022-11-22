@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/widgets/app.button.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var kSpacingX = SizedBox(
+      height: AppConstants.sizeConfig(context, 0.01).height,
+    );
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 100,
+        elevation: 1,
         backgroundColor: Colors.white,
         title: const Text(
-            'Edit Profile',
+          'Edit Profile',
           style: TextStyle(
             color: Colors.black,
           ),
         ),
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Row(
             children: const [
               Icon(
-                  Icons.arrow_back_ios_new,
+                Icons.arrow_back_ios_new,
                 color: Colors.blue,
               ),
               Text(
-                  'Back',
+                'Back',
                 style: TextStyle(
                   color: Colors.blue,
                 ),
@@ -36,7 +42,7 @@ class EditProfile extends StatelessWidget {
         ),
         actions: [
           GestureDetector(
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
             child: Padding(
@@ -47,7 +53,7 @@ class EditProfile extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                      'Cancel',
+                    'Cancel',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.blue,
@@ -58,6 +64,141 @@ class EditProfile extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('username'),
+                  hintText: 'username',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Full Name'),
+                  hintText: 'John Doe',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Bio'),
+                  hintText: 'Bio',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Website'),
+                  hintText: 'Website',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Gender'),
+                  hintText: 'Male',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('DOB'),
+                  hintText: 'DOB',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            Container(
+              width: AppConstants.sizeConfig(context, 1).width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppConstants.kEditTextNormal,
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text('Email'),
+                  hintText: 'Email',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+            kSpacingX,
+            AppButton(
+                onTapped: () {
+                  Navigator.pop(context);
+                },
+                text: 'Save',
+                bgColor: AppConstants.kPrimaryBlack,
+                textColor: AppConstants.kPrimaryWhite,
+            ),
+          ],
+        ),
       ),
     );
   }

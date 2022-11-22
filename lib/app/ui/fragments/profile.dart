@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/ui/edit.profile.dart';
+import 'package:live_me/app/ui/settings.dart';
 import 'package:live_me/app/widgets/icon.card.dart';
 
 import '../../widgets/dance.grid.view.card.dart';
@@ -229,7 +230,9 @@ class ProfileFragment extends StatelessWidget {
               IconCard(
                   title: 'Settings',
                   icon: AppAssets.kSettingsIcon,
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Settings()));
+                  },
               ),
             ],
           ),

@@ -24,6 +24,10 @@ class AppAssets{
   static String kSecurityIcon = 'assets/icons/security.png';
   static String kSettingsIcon = 'assets/icons/settings.png';
   static String kSharingIcon = 'assets/icons/sharing.png';
+  static String kAwardVector = 'assets/icons/award_vector.png';
+  static String kDollarIcon = 'assets/icons/dollar.png';
+  static String kPrizeIcon = 'assets/icons/prize.png';
+  static String kGlyph = 'assets/icons/glyph.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
