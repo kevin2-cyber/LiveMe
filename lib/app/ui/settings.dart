@@ -134,6 +134,111 @@ class _SettingsState extends State<Settings> {
                 ),
               ],
             ),
+            const ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: Icon(Icons.calendar_today_outlined),
+              ),
+              title: Text('Stream Schedule'),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            const ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.pink,
+                child: Icon(Icons.diamond_outlined),
+              ),
+              title: Text('Premium'),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.amber,
+                child: Image.asset(AppAssets.kAwardVector),
+              ),
+              title: const Text('Achievements'),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.purple.shade300,
+                child: Image.asset(AppAssets.kDollarIcon),
+              ),
+              title: const Text('Buy Coins'),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            const ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.green,
+                child: Icon(Icons.account_balance_wallet),
+              ),
+              title: Text('My revenue'),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: Colors.blue,
+                child: Image.asset(AppAssets.kPrizeIcon),
+              ),
+              title: const Text('My Prize'),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: CircleAvatar(
+                backgroundColor: const Color(0xFFF77943),
+                child: Image.asset(AppAssets.kGlyph),
+              ),
+              title: const Text('Leaderboard Invisible Setting'),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            SizedBox(
+              height: AppConstants.sizeConfig(context, 0.01).height,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                MaterialButton(
+                  height: 50,
+                  minWidth: AppConstants.sizeConfig(context, 0.45).width,
+                  onPressed: (){},
+                  color: AppConstants.kPrimaryBlack,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: const Text(
+                      'Logout',
+                    style: TextStyle(
+                      color: AppConstants.kPrimaryWhite,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                MaterialButton(
+                  height: 50,
+                  minWidth: AppConstants.sizeConfig(context, 0.45).width,
+                  onPressed: (){},
+                  color: AppConstants.kPrimaryWhite,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: const Text(
+                      'Advanced Settings',
+                    style: TextStyle(
+                      color: AppConstants.kPrimaryBlack,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
