@@ -6,7 +6,8 @@ class Leaderboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
       leadingWidth: 100,
       elevation: 1,
       backgroundColor: Colors.white,
@@ -117,7 +118,26 @@ class Leaderboard extends StatelessWidget {
               ),
             ),
           ),
-
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: OutlinedButton(
+              onPressed: (){},
+              child: Row(
+                children: [
+                    Expanded(
+                      child: Container(
+                        height: AppConstants.sizeConfig(context, 0.04).height,
+                        width: AppConstants.sizeConfig(context, 1).width,
+                        color: Colors.black,
+                        child: const Text('Today'),
+                      ),
+                    ),
+                    Container(),
+                    Container(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
