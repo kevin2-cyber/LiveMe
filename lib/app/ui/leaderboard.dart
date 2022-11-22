@@ -120,21 +120,22 @@ class Leaderboard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: OutlinedButton(
-              onPressed: (){},
-              child: Row(
-                children: [
-                    Expanded(
-                      child: Container(
-                        height: AppConstants.sizeConfig(context, 0.04).height,
-                        width: AppConstants.sizeConfig(context, 1).width,
-                        color: Colors.black,
-                        child: const Text('Today'),
+            child: DefaultTabController(
+              length: 3,
+              child: OutlinedButton(
+                onPressed: (){},
+                child: TabBar(
+                  tabs: [
+                      Tab(
+                        child: Container(
+                          color: Colors.black,
+                          child: const Text('Today'),
+                        ),
                       ),
-                    ),
-                    Container(),
-                    Container(),
-                ],
+                      Tab(child: Container()),
+                      Tab(child: Container()),
+                  ],
+                ),
               ),
             ),
           ),
