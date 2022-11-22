@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/ui/leaderboard.dart';
 import 'package:live_me/app/widgets/custom.switch.dart';
 
 class Settings extends StatefulWidget {
@@ -195,7 +196,9 @@ class _SettingsState extends State<Settings> {
                 child: Image.asset(AppAssets.kGlyph),
               ),
               title: const Text('Leaderboard Invisible Setting'),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: GestureDetector(child: const Icon(Icons.arrow_forward_ios_rounded), onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Leaderboard()));
+              },),
             ),
             SizedBox(
               height: AppConstants.sizeConfig(context, 0.01).height,
