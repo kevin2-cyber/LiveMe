@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/ui/advanced.settings.dart';
 import 'package:live_me/app/ui/leaderboard.dart';
+import 'package:live_me/app/ui/screens.dart';
 import 'package:live_me/app/widgets/custom.switch.dart';
 
 class Settings extends StatefulWidget {
@@ -21,7 +23,7 @@ class _SettingsState extends State<Settings> {
         elevation: 1,
         backgroundColor: Colors.white,
         title: const Text(
-            'Settings',
+          'Settings',
           style: TextStyle(
             color: Colors.black,
           ),
@@ -78,7 +80,7 @@ class _SettingsState extends State<Settings> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 Text(
-                    'Privacy',
+                  'Privacy',
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.black54,
@@ -91,15 +93,15 @@ class _SettingsState extends State<Settings> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  [
+              children: [
                 const Text('Private Account'),
                 CustomSwitch(
-                    value: isSwitched,
-                    onChanged: (value) {
-                      setState(() {
-                        isSwitched = value;
-                      });
-                    },
+                  value: isSwitched,
+                  onChanged: (value) {
+                    setState(() {
+                      isSwitched = value;
+                    });
+                  },
                 ),
               ],
             ),
@@ -108,15 +110,15 @@ class _SettingsState extends State<Settings> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  [
+              children: [
                 const Text('Private Follow List'),
                 CustomSwitch(
-                    value: isOn,
-                    onChanged: (value) {
-                      setState(() {
-                        isOn = value;
-                      });
-                    },
+                  value: isOn,
+                  onChanged: (value) {
+                    setState(() {
+                      isOn = value;
+                    });
+                  },
                 ),
               ],
             ),
@@ -127,7 +129,7 @@ class _SettingsState extends State<Settings> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 Text(
-                    'User Settings',
+                  'User Settings',
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.black54,
@@ -196,9 +198,15 @@ class _SettingsState extends State<Settings> {
                 child: Image.asset(AppAssets.kGlyph),
               ),
               title: const Text('Leaderboard Invisible Setting'),
-              trailing: GestureDetector(child: const Icon(Icons.arrow_forward_ios_rounded), onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Leaderboard()));
-              },),
+              trailing: GestureDetector(
+                child: const Icon(Icons.arrow_forward_ios_rounded),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Leaderboard()));
+                },
+              ),
             ),
             SizedBox(
               height: AppConstants.sizeConfig(context, 0.01).height,
@@ -209,13 +217,14 @@ class _SettingsState extends State<Settings> {
                 MaterialButton(
                   height: 50,
                   minWidth: AppConstants.sizeConfig(context, 0.45).width,
-                  onPressed: (){},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Welcome()));
+                  },
                   color: AppConstants.kPrimaryBlack,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
+                      borderRadius: BorderRadius.circular(10)),
                   child: const Text(
-                      'Logout',
+                    'Logout',
                     style: TextStyle(
                       color: AppConstants.kPrimaryWhite,
                       fontSize: 17,
@@ -226,13 +235,17 @@ class _SettingsState extends State<Settings> {
                 MaterialButton(
                   height: 50,
                   minWidth: AppConstants.sizeConfig(context, 0.45).width,
-                  onPressed: (){},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AdvancedSettings()));
+                  },
                   color: AppConstants.kPrimaryWhite,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
+                      borderRadius: BorderRadius.circular(10)),
                   child: const Text(
-                      'Advanced Settings',
+                    'Advanced Settings',
                     style: TextStyle(
                       color: AppConstants.kPrimaryBlack,
                       fontSize: 17,
