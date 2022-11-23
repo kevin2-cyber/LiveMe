@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/ui/notifications.dart';
 
 class AdvancedSettings extends StatelessWidget {
   const AdvancedSettings({Key? key}) : super(key: key);
@@ -67,9 +68,14 @@ class AdvancedSettings extends StatelessWidget {
             title: Text('Verify your number'),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
           ),
-          const ListTile(
-            title: Text('Notification Settings'),
-            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ListTile(
+            title: const Text('Notification Settings'),
+            trailing: IconButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Notifications()));
+              },
+              icon: const Icon(Icons.arrow_forward_ios_rounded),
+            ),
           ),
           SizedBox(
             height: AppConstants.sizeConfig(context, 0.007).height,
