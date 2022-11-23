@@ -61,35 +61,74 @@ class AdvancedSettings extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            ListTile(
-              title: Text('Verify your number'),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            ListTile(
-              title: Text('Notification Settings'),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            Row(
+      body: Column(
+        children: [
+          const ListTile(
+            title: Text('Verify your number'),
+            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ),
+          const ListTile(
+            title: Text('Notification Settings'),
+            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ),
+          SizedBox(
+            height: AppConstants.sizeConfig(context, 0.007).height,
+          ),
+          Container(
+            width: AppConstants.sizeConfig(context, 1).width,
+            height: AppConstants.sizeConfig(context, 0.05).height,
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            color: Colors.grey.shade300,
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: AppConstants.sizeConfig(context, 0.7).width,
-                  height: AppConstants.sizeConfig(context, 0.05).height,
-                  child: Text(
-                      'Support',
-                    style: TextStyle(
-                      color: Colors.black12,
-                    ),
+              children: const [
+                Text(
+                    'Support',
+                  style: TextStyle(
+                    color: Colors.black38,
+                    fontSize: 20,
                   ),
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+          const ListTile(
+            title: Text('Terms of Service'),
+            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ),
+          const ListTile(
+            title: Text('Support'),
+            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ),
+          SizedBox(
+            height: AppConstants.sizeConfig(context, 0.007).height,
+          ),
+          Container(
+            width: AppConstants.sizeConfig(context, 1).width,
+            height: AppConstants.sizeConfig(context, 0.05).height,
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            color: Colors.grey.shade300,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                Text(
+                    'Region',
+                  style: TextStyle(
+                    color: Colors.black38,
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: AppConstants.sizeConfig(context, 0.007).height,
+          ),
+          ListTile(
+            title: const Text('Select Region'),
+            trailing: TextButton(onPressed: (){}, child: const Text('India')),
+          ),
+        ],
       ),
     );
   }
