@@ -69,8 +69,7 @@ class Streaming extends StatelessWidget {
                     const Text(
                         '12',
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                        color: AppConstants.kPrimaryWhite,
                       ),
                     ),
                   ],
@@ -81,7 +80,7 @@ class Streaming extends StatelessWidget {
               top: 50,
               right: 20,
               child: Container(
-                width: AppConstants.sizeConfig(context, 0.3).width,
+                width: AppConstants.sizeConfig(context, 0.23).width,
                 height: AppConstants.sizeConfig(context, 0.04).height,
                 decoration:  BoxDecoration(
                   color: Colors.grey.withAlpha(150),
@@ -89,7 +88,50 @@ class Streaming extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
                     Image.asset(AppAssets.kEye),
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
+                    const Text(
+                        '13789',
+                      style: TextStyle(
+                        color: AppConstants.kPrimaryWhite,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 95,
+              left: 20,
+              child: Container(
+                width: AppConstants.sizeConfig(context, 0.23).width,
+                height: AppConstants.sizeConfig(context, 0.04).height,
+                decoration:  BoxDecoration(
+                  color: Colors.amber.withAlpha(100),
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
+                    Image.asset(AppAssets.kEye),
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
+                    const Text(
+                      '13789',
+                      style: TextStyle(
+                        color: AppConstants.kPrimaryWhite,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
                   ],
                 ),
               ),
