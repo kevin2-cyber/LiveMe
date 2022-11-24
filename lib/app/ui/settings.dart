@@ -3,6 +3,7 @@ import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/ui/advanced.settings.dart';
 import 'package:live_me/app/ui/leaderboard.dart';
 import 'package:live_me/app/ui/screens.dart';
+import 'package:live_me/app/ui/streaming.dart';
 import 'package:live_me/app/widgets/custom.switch.dart';
 
 class Settings extends StatefulWidget {
@@ -137,14 +138,19 @@ class _SettingsState extends State<Settings> {
                 ),
               ],
             ),
-            const ListTile(
-              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-              leading: CircleAvatar(
+             ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              leading: const CircleAvatar(
                 backgroundColor: Colors.blue,
                 child: Icon(Icons.calendar_today_outlined),
               ),
-              title: Text('Stream Schedule'),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
+              title: const Text('Stream Schedule'),
+              trailing: GestureDetector(
+                child: const Icon(Icons.arrow_forward_ios_rounded),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Streaming()));
+                },
+              ),
             ),
             const ListTile(
               contentPadding: EdgeInsets.symmetric(horizontal: 16.0),

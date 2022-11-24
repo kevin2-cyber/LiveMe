@@ -6,6 +6,7 @@ class ActivityCard extends StatelessWidget {
   final String category;
   final Color textColor;
   final Color cardColor;
+
   const ActivityCard(
       {Key? key,
       required this.onTap,
