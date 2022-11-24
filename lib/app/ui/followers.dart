@@ -77,7 +77,7 @@ class Followers extends StatelessWidget {
               ),
             ),
             const Divider(),
-            Container(
+            SizedBox(
               height: AppConstants.sizeConfig(context, 0.765).height,
               child: ListView(
                 scrollDirection: Axis.vertical,
