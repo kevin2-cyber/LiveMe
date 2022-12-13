@@ -160,6 +160,13 @@ class Streaming extends StatelessWidget {
                           iconSize: 13,
                           textSize: 13,
                         ),
+                        const Text(
+                            'Hey',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
                       ],
                     ),
                   ),
