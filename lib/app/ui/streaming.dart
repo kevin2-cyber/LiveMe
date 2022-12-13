@@ -6,6 +6,7 @@ class Streaming extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const kGold = Color(0xFFFBBF00);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -110,10 +111,10 @@ class Streaming extends StatelessWidget {
               top: 95,
               left: 20,
               child: Container(
-                width: AppConstants.sizeConfig(context, 0.23).width,
+                width: AppConstants.sizeConfig(context, 0.3).width,
                 height: AppConstants.sizeConfig(context, 0.04).height,
                 decoration:  BoxDecoration(
-                  color: Colors.amber.withAlpha(100),
+                  color: kGold.withAlpha(12),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Row(
@@ -121,15 +122,15 @@ class Streaming extends StatelessWidget {
                     SizedBox(
                       width: AppConstants.sizeConfig(context, 0.025).width,
                     ),
-                    Image.asset(AppAssets.kEye),
+                    Image.asset(AppAssets.kDollarsIcon),
                     SizedBox(
                       width: AppConstants.sizeConfig(context, 0.025).width,
                     ),
                     const Text(
-                      '13789',
+                      '1356789',
                       style: TextStyle(
-                        color: AppConstants.kPrimaryWhite,
-                        fontWeight: FontWeight.w900,
+                        color: kGold,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],

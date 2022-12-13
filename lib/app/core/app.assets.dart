@@ -30,6 +30,7 @@ class AppAssets{
   static String kPrizeIcon = 'assets/icons/prize.png';
   static String kGlyph = 'assets/icons/glyph.png';
   static String kEye = 'assets/icons/eye.png';
+  static String kDollarsIcon = 'assets/icons/dollars.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
