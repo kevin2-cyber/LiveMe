@@ -137,6 +137,19 @@ class Streaming extends StatelessWidget {
                 ),
               ),
             ),
+            Positioned(
+              top: 320,
+              right: 0,
+              child: ClipRRect(
+                  child: Container(
+                    height: AppConstants.sizeConfig(context, 0.18).height,
+                    width: AppConstants.sizeConfig(context, 0.1).width,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF151515),
+                    ),
+                  ),
+              ),
+            ),
           ],
         ),
       ),
