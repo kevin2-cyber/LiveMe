@@ -32,6 +32,9 @@ class AppAssets{
   static String kEye = 'assets/icons/eye.png';
   static String kDollarsIcon = 'assets/icons/dollars.png';
   static String kSharingT = 'assets/icons/sharingT.png';
+  static String kDollarT = 'assets/icons/dollarT.png';
+  static String kChevronT = 'assets/icons/chevronT.png';
+  static String kChevronUp = 'assets/icons/chevron_up.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
