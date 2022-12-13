@@ -141,11 +141,15 @@ class Streaming extends StatelessWidget {
               top: 320,
               right: 0,
               child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  bottomLeft: Radius.circular(20)
+                ),
                   child: Container(
                     height: AppConstants.sizeConfig(context, 0.18).height,
                     width: AppConstants.sizeConfig(context, 0.1).width,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF151515),
+                      color: const Color(0xFF151515).withAlpha(55),
                     ),
                   ),
               ),
