@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
 import '../widgets/side.stream.dart';
+import '../widgets/stars.dart';
 
 class Streaming extends StatelessWidget {
   const Streaming({Key? key}) : super(key: key);
@@ -53,31 +54,7 @@ class Streaming extends StatelessWidget {
             Positioned(
               top: 50,
               right: 200,
-              child: Container(
-                width: AppConstants.sizeConfig(context, 0.15).width,
-                height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration: const BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: AppConstants.sizeConfig(context, 0.025).width,
-                    ),
-                    const Icon(
-                        Icons.star,
-                      color: Colors.amber,
-                    ),
-                    const Text(
-                        '12',
-                      style: TextStyle(
-                        color: AppConstants.kPrimaryWhite,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              child: StarsWidget(),
             ),
             Positioned(
               top: 50,
@@ -144,11 +121,37 @@ class Streaming extends StatelessWidget {
               right: 0,
               child: SideStream(),
             ),
+            Positioned(
+              top: 400,
+              left: 20,
+              child: Column(
+                children: [
+                  Container(
+                    height: AppConstants.sizeConfig(context, 0.045).height,
+                    width: AppConstants.sizeConfig(context, 0.6).width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFF7C7C7C).withAlpha(200),
+                    ),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: AssetImage(AppAssets.kPhilipeAvatar),
+                          radius: 15,
+                        ),
+                        Text('Christian Olson'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
 
 

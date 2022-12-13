@@ -57,6 +57,7 @@ class AppAssets{
   static String kListAvatar = 'assets/images/circular_list.png';
   static String kListAvatar1 = 'assets/images/circular_list_1.png';
   static String kStreamingAvatar = 'assets/images/streaming_icon.png';
+  static String kPhilipeAvatar = 'assets/images/philipe.png';
 
   // Videos
   static String kVideoUn = 'assets/images/video_un.png';
