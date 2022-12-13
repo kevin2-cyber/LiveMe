@@ -30,6 +30,11 @@ class AppAssets{
   static String kPrizeIcon = 'assets/icons/prize.png';
   static String kGlyph = 'assets/icons/glyph.png';
   static String kEye = 'assets/icons/eye.png';
+  static String kDollarsIcon = 'assets/icons/dollars.png';
+  static String kSharingT = 'assets/icons/sharingT.png';
+  static String kDollarT = 'assets/icons/dollarT.png';
+  static String kChevronT = 'assets/icons/chevronT.png';
+  static String kChevronUp = 'assets/icons/chevron_up.png';
 
   // Images
   static String kWelcomeBg = 'assets/images/welcome_bg.jpeg';
@@ -52,6 +57,7 @@ class AppAssets{
   static String kListAvatar = 'assets/images/circular_list.png';
   static String kListAvatar1 = 'assets/images/circular_list_1.png';
   static String kStreamingAvatar = 'assets/images/streaming_icon.png';
+  static String kPhilipeAvatar = 'assets/images/philipe.png';
 
   // Videos
   static String kVideoUn = 'assets/images/video_un.png';

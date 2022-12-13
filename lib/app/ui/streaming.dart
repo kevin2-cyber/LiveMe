@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
+import '../widgets/side.stream.dart';
+import '../widgets/stars.dart';
+import '../widgets/stream.tile.dart';
+
 class Streaming extends StatelessWidget {
   const Streaming({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    const kGold = Color(0xFFFBBF00);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -47,33 +52,15 @@ class Streaming extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               top: 50,
               right: 200,
-              child: Container(
-                width: AppConstants.sizeConfig(context, 0.15).width,
-                height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration: const BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: AppConstants.sizeConfig(context, 0.025).width,
-                    ),
-                    const Icon(
-                        Icons.star,
-                      color: Colors.amber,
-                    ),
-                    const Text(
-                        '12',
-                      style: TextStyle(
-                        color: AppConstants.kPrimaryWhite,
-                      ),
-                    ),
-                  ],
-                ),
+              child: StarsWidget(
+                sizeH: 0.04,
+                sizeW: 0.14,
+                number: 12,
+                iconSize: 20,
+                textSize: 15,
               ),
             ),
             Positioned(
@@ -82,38 +69,8 @@ class Streaming extends StatelessWidget {
               child: Container(
                 width: AppConstants.sizeConfig(context, 0.23).width,
                 height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   color: Colors.grey.withAlpha(150),
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: AppConstants.sizeConfig(context, 0.025).width,
-                    ),
-                    Image.asset(AppAssets.kEye),
-                    SizedBox(
-                      width: AppConstants.sizeConfig(context, 0.025).width,
-                    ),
-                    const Text(
-                        '13789',
-                      style: TextStyle(
-                        color: AppConstants.kPrimaryWhite,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              top: 95,
-              left: 20,
-              child: Container(
-                width: AppConstants.sizeConfig(context, 0.23).width,
-                height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration:  BoxDecoration(
-                  color: Colors.amber.withAlpha(100),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Row(
@@ -136,9 +93,71 @@ class Streaming extends StatelessWidget {
                 ),
               ),
             ),
+            Positioned(
+              top: 95,
+              left: 20,
+              child: Container(
+                width: AppConstants.sizeConfig(context, 0.3).width,
+                height: AppConstants.sizeConfig(context, 0.04).height,
+                decoration: BoxDecoration(
+                  color: kGold.withAlpha(12),
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
+                    Image.asset(AppAssets.kDollarsIcon),
+                    SizedBox(
+                      width: AppConstants.sizeConfig(context, 0.025).width,
+                    ),
+                    const Text(
+                      '1356789',
+                      style: TextStyle(
+                        color: kGold,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 320,
+              right: 0,
+              child: SideStream(),
+            ),
+            Positioned(
+              top: 400,
+              left: 20,
+              child: Column(
+                children: const [
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
