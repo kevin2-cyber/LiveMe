@@ -6,12 +6,16 @@ class StarsWidget extends StatelessWidget {
   final double sizeH;
   final double sizeW;
   final int number;
+  final double iconSize;
+  final double textSize;
 
   const StarsWidget({
     super.key,
     required this.sizeH,
     required this.sizeW,
     required this.number,
+    required this.iconSize,
+    required this.textSize,
   });
 
   @override
@@ -24,18 +28,21 @@ class StarsWidget extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(20)),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            width: AppConstants.sizeConfig(context, 0.025).width,
-          ),
-          const Icon(
+          // SizedBox(
+          //   width: AppConstants.sizeConfig(context, 0.025).width,
+          // ),
+          Icon(
             Icons.star,
             color: Colors.amber,
+            size: iconSize,
           ),
           Text(
             number.toString(),
-            style: const TextStyle(
+            style:  TextStyle(
               color: AppConstants.kPrimaryWhite,
+              fontSize: textSize,
             ),
           ),
         ],

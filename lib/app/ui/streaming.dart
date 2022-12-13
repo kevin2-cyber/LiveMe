@@ -51,13 +51,15 @@ class Streaming extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               top: 50,
               right: 200,
               child: StarsWidget(
                 sizeH: 0.04,
-                sizeW: 0.15,
+                sizeW: 0.14,
                 number: 12,
+                iconSize: 20,
+                textSize: 15,
               ),
             ),
             Positioned(
@@ -66,7 +68,7 @@ class Streaming extends StatelessWidget {
               child: Container(
                 width: AppConstants.sizeConfig(context, 0.23).width,
                 height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   color: Colors.grey.withAlpha(150),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
@@ -80,7 +82,7 @@ class Streaming extends StatelessWidget {
                       width: AppConstants.sizeConfig(context, 0.025).width,
                     ),
                     const Text(
-                        '13789',
+                      '13789',
                       style: TextStyle(
                         color: AppConstants.kPrimaryWhite,
                         fontWeight: FontWeight.w900,
@@ -96,7 +98,7 @@ class Streaming extends StatelessWidget {
               child: Container(
                 width: AppConstants.sizeConfig(context, 0.3).width,
                 height: AppConstants.sizeConfig(context, 0.04).height,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   color: kGold.withAlpha(12),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
@@ -138,12 +140,26 @@ class Streaming extends StatelessWidget {
                       color: const Color(0xFF7C7C7C).withAlpha(200),
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         CircleAvatar(
                           backgroundImage: AssetImage(AppAssets.kPhilipeAvatar),
                           radius: 15,
                         ),
-                        Text('Christian Olson'),
+                        const Text(
+                          'Christian Olson',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                        const StarsWidget(
+                          sizeH: 0.028,
+                          sizeW: 0.09,
+                          number: 62,
+                          iconSize: 13,
+                          textSize: 13,
+                        ),
                       ],
                     ),
                   ),
@@ -156,6 +172,3 @@ class Streaming extends StatelessWidget {
     );
   }
 }
-
-
-
