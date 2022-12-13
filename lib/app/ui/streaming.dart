@@ -3,6 +3,7 @@ import 'package:live_me/app/core/core.dart';
 
 import '../widgets/side.stream.dart';
 import '../widgets/stars.dart';
+import '../widgets/stream.tile.dart';
 
 class Streaming extends StatelessWidget {
   const Streaming({Key? key}) : super(key: key);
@@ -131,45 +132,24 @@ class Streaming extends StatelessWidget {
               top: 400,
               left: 20,
               child: Column(
-                children: [
-                  Container(
-                    height: AppConstants.sizeConfig(context, 0.045).height,
-                    width: AppConstants.sizeConfig(context, 0.6).width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xFF7C7C7C).withAlpha(200),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(AppAssets.kPhilipeAvatar),
-                          radius: 15,
-                        ),
-                        const Text(
-                          'Christian Olson',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        ),
-                        const StarsWidget(
-                          sizeH: 0.028,
-                          sizeW: 0.09,
-                          number: 62,
-                          iconSize: 13,
-                          textSize: 13,
-                        ),
-                        const Text(
-                            'Hey',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
+                children: const [
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
                   ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  StreamedTiles(),
                 ],
               ),
             ),
@@ -179,3 +159,5 @@ class Streaming extends StatelessWidget {
     );
   }
 }
+
+
