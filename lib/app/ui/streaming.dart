@@ -54,7 +54,11 @@ class Streaming extends StatelessWidget {
             Positioned(
               top: 50,
               right: 200,
-              child: StarsWidget(),
+              child: StarsWidget(
+                sizeH: 0.04,
+                sizeW: 0.15,
+                number: 12,
+              ),
             ),
             Positioned(
               top: 50,

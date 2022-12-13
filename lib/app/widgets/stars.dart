@@ -3,15 +3,22 @@ import 'package:flutter/material.dart';
 import '../core/core.dart';
 
 class StarsWidget extends StatelessWidget {
+  final double sizeH;
+  final double sizeW;
+  final int number;
+
   const StarsWidget({
     super.key,
+    required this.sizeH,
+    required this.sizeW,
+    required this.number,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppConstants.sizeConfig(context, 0.15).width,
-      height: AppConstants.sizeConfig(context, 0.04).height,
+      width: AppConstants.sizeConfig(context, sizeW).width,
+      height: AppConstants.sizeConfig(context, sizeH).height,
       decoration: const BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -25,9 +32,9 @@ class StarsWidget extends StatelessWidget {
             Icons.star,
             color: Colors.amber,
           ),
-          const Text(
-            '12',
-            style: TextStyle(
+          Text(
+            number.toString(),
+            style: const TextStyle(
               color: AppConstants.kPrimaryWhite,
             ),
           ),
