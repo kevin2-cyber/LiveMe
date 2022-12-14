@@ -1,5 +1,4 @@
 # LiveMe
 Let's get social
-
-## How the design looks like
+## The design
 ![](assets/screen_designs/live_me_community.png)
