@@ -11,6 +11,7 @@ class Streaming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const kGold = Color(0xFFFBBF00);
+    const kColor2 = Color(0xFFDFDFDF);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -129,7 +130,7 @@ class Streaming extends StatelessWidget {
               child: SideStream(),
             ),
             Positioned(
-              top: 500,
+              top: 490,
               left: 20,
               child: Column(
                 children: const [
@@ -154,7 +155,7 @@ class Streaming extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 820,
+              top: 800,
               left: 20,
               child: Row(
                 children: [
@@ -229,6 +230,44 @@ class Streaming extends StatelessWidget {
                         'Great',
                         style: TextStyle(
                           color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              top: 850,
+              left: 20,
+              child: Row(
+                children: [
+                  Container(
+                    height: 41,
+                    width: 241,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        label: Text(
+                            'Type here...',
+                          style: TextStyle(
+                            color: kColor2,
+                          ),
+                        ),
+                        suffixIcon: Icon(
+                            Icons.send,
+                          color: kColor2,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          borderSide: BorderSide.none,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          borderSide: BorderSide.none,
                         ),
                       ),
                     ),
