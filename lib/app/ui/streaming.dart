@@ -129,25 +129,25 @@ class Streaming extends StatelessWidget {
               child: SideStream(),
             ),
             Positioned(
-              top: 400,
+              top: 500,
               left: 20,
               child: Column(
                 children: const [
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                 ],
