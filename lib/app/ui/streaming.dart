@@ -153,6 +153,89 @@ class Streaming extends StatelessWidget {
                 ],
               ),
             ),
+            Positioned(
+              top: 820,
+              left: 20,
+              child: Row(
+                children: [
+                  Container(
+                    width: 70,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                          'Hello!!',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 110,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                        'How\'s you',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiUn),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiD),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiT),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  Container(
+                    width: 70,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                        'Great',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
