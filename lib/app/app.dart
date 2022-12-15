@@ -14,12 +14,14 @@ class LiveMeApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       title: AppConstants.kAppName,
       darkTheme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.robotoTextTheme(),
-        primaryColorDark: AppConstants.kPrimaryBlack
+        textTheme: GoogleFonts.lexendDecaTextTheme(),
+        primaryColorDark: AppConstants.kPrimaryBlack,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       theme: ThemeData.light().copyWith(
-        textTheme: GoogleFonts.robotoTextTheme(),
+        textTheme: GoogleFonts.lexendDecaTextTheme(),
         primaryColorLight: AppConstants.kPrimaryWhite,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const Welcome(),
     );

@@ -11,6 +11,7 @@ class Streaming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const kGold = Color(0xFFFBBF00);
+    const kColor2 = Color(0xFFDFDFDF);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -129,27 +130,148 @@ class Streaming extends StatelessWidget {
               child: SideStream(),
             ),
             Positioned(
-              top: 400,
+              top: 490,
               left: 20,
               child: Column(
                 children: const [
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   StreamedTiles(),
+                ],
+              ),
+            ),
+            Positioned(
+              top: 800,
+              left: 20,
+              child: Row(
+                children: [
+                  Container(
+                    width: 70,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                          'Hello!!',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 110,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                        'How\'s you',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiUn),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiD),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    child: Image.asset(AppAssets.kEmojiT),
+                  ),
+                  const SizedBox(
+                    width: 05,
+                  ),
+                  Container(
+                    width: 70,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:  const Center(
+                      child: Text(
+                        'Great',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              top: 850,
+              left: 20,
+              child: Row(
+                children: [
+                  Container(
+                    height: 41,
+                    width: 241,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade800.withAlpha(150),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        label: Text(
+                            'Type here...',
+                          style: TextStyle(
+                            color: kColor2,
+                          ),
+                        ),
+                        suffixIcon: Icon(
+                            Icons.send,
+                          color: kColor2,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          borderSide: BorderSide.none,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

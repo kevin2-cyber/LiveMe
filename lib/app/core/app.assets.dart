@@ -65,4 +65,9 @@ class AppAssets{
   static String kVideoT = 'assets/images/video_t.png';
   static String kVideoQ = 'assets/images/video_q.png';
 
+  // Emojis
+  static String kEmojiUn = 'assets/icons/smile_f.png';
+  static String kEmojiD = 'assets/icons/nerd.png';
+  static String kEmojiT = 'assets/icons/noto.png';
+
 }
