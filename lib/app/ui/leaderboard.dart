@@ -1,11 +1,14 @@
+
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
+import 'package:live_me/app/model/leaderboard.model.dart';
 
 class Leaderboard extends StatelessWidget {
   const Leaderboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    bool hasPosition = true;
     return Scaffold(
       appBar: AppBar(
       leadingWidth: 100,
@@ -118,25 +121,61 @@ class Leaderboard extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: DefaultTabController(
-              length: 3,
-              child: OutlinedButton(
-                onPressed: (){},
-                child: TabBar(
-                  tabs: [
-                      Tab(
-                        child: Container(
-                          color: Colors.black,
-                          child: const Text('Today'),
+          Container(
+            height: AppConstants.sizeConfig(context, 0.6).height,
+            padding: const EdgeInsets.all(16.0),
+            child: ListView.separated(
+              itemCount: samples.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  width: 342,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF979797).withAlpha(100),
+                    borderRadius: const BorderRadius.all(Radius.circular(10))
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: AppConstants.sizeConfig(context, 0.02).width,
+                      ),
+                      Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(samples[index].avatar),
+                          ),
+                          borderRadius: const BorderRadius.all(Radius.circular(10))
+                        ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: hasPosition ? Text(samples[index].ranking.toString()) : null,
+                            ),
+                          ],
                         ),
                       ),
-                      Tab(child: Container()),
-                      Tab(child: Container()),
-                  ],
-                ),
-              ),
+                      SizedBox(
+                        width: AppConstants.sizeConfig(context, 0.02).width,
+                      ),
+                      Text(samples[index].name),
+                      SizedBox(
+                        width: AppConstants.sizeConfig(context, 0.34).width,
+                      ),
+                      Image.asset(AppAssets.kDollarsIcon),
+                      SizedBox(
+                        width: AppConstants.sizeConfig(context, 0.01).width,
+                      ),
+                      Text(samples[index].amount),
+                      SizedBox(
+                        width: AppConstants.sizeConfig(context, 0.02).width,
+                      ),
+                    ],
+                  ),
+                );
+              }, separatorBuilder: (BuildContext context, int index) => const SizedBox(height: 20,),
             ),
           ),
         ],
