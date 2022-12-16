@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/app.assets.dart';
-import '../../widgets/scroll.card.dart';
+import '../../core/core.dart';
+import '../../widgets/widgets.dart';
 
 class FeedFragment extends StatelessWidget {
   const FeedFragment({Key? key}) : super(key: key);

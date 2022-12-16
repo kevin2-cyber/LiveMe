@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/ui/advanced.settings.dart';
-import 'package:live_me/app/ui/leaderboard.dart';
 import 'package:live_me/app/ui/screens.dart';
-import 'package:live_me/app/ui/streaming.dart';
-import 'package:live_me/app/widgets/custom.switch.dart';
+import 'package:live_me/app/widgets/widgets.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);

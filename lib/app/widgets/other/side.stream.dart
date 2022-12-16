@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/core.dart';
+import '../../core/core.dart';
 
 class SideStream extends StatelessWidget {
   const SideStream({
@@ -23,7 +23,11 @@ class SideStream extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset(AppAssets.kSharingT),
+            // back to settings screen
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+                child: Image.asset(AppAssets.kSharingT),
+            ),
             Image.asset(AppAssets.kDollarT),
             CircleAvatar(
               backgroundColor: const Color(0xFF7C7C7C).withAlpha(100),

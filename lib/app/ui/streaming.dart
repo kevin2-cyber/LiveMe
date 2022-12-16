@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
-import '../widgets/side.stream.dart';
-import '../widgets/stars.dart';
-import '../widgets/stream.tile.dart';
+import '../widgets/widgets.dart';
 
 class Streaming extends StatelessWidget {
   const Streaming({Key? key}) : super(key: key);
@@ -12,6 +10,7 @@ class Streaming extends StatelessWidget {
   Widget build(BuildContext context) {
     const kGold = Color(0xFFFBBF00);
     const kColor2 = Color(0xFFDFDFDF);
+    var withAlpha = Colors.grey.shade800.withAlpha(150);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -157,123 +156,12 @@ class Streaming extends StatelessWidget {
             Positioned(
               top: 800,
               left: 20,
-              child: Row(
-                children: [
-                  Container(
-                    width: 70,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child:  const Center(
-                      child: Text(
-                          'Hello!!',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    width: 110,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child:  const Center(
-                      child: Text(
-                        'How\'s you',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 05,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
-                    child: Image.asset(AppAssets.kEmojiUn),
-                  ),
-                  const SizedBox(
-                    width: 05,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
-                    child: Image.asset(AppAssets.kEmojiD),
-                  ),
-                  const SizedBox(
-                    width: 05,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
-                    child: Image.asset(AppAssets.kEmojiT),
-                  ),
-                  const SizedBox(
-                    width: 05,
-                  ),
-                  Container(
-                    width: 70,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    ),
-                    child:  const Center(
-                      child: Text(
-                        'Great',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: TextSuggestions(withAlpha: withAlpha),
             ),
             Positioned(
               top: 850,
               left: 20,
-              child: Row(
-                children: [
-                  Container(
-                    height: 41,
-                    width: 241,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        label: Text(
-                            'Type here...',
-                          style: TextStyle(
-                            color: kColor2,
-                          ),
-                        ),
-                        suffixIcon: Icon(
-                            Icons.send,
-                          color: kColor2,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                          borderSide: BorderSide.none,
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: BottomMessageBox(withAlpha: withAlpha, kColor2: kColor2),
             ),
           ],
         ),
@@ -281,5 +169,3 @@ class Streaming extends StatelessWidget {
     );
   }
 }
-
-

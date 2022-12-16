@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
-import '../../widgets/video.card.dart';
+import '../../widgets/widgets.dart';
 
 class VideoFragment extends StatelessWidget {
   const VideoFragment({Key? key}) : super(key: key);
