@@ -179,6 +179,7 @@ class Leaderboard extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(samples[index].avatar),
+                            fit: BoxFit.fill,
                           ),
                           borderRadius: const BorderRadius.all(Radius.circular(10))
                         ),
