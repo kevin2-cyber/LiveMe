@@ -8,7 +8,7 @@ class Leaderboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool hasPosition = true;
+    bool hasPosition = false;
     return Scaffold(
       appBar: AppBar(
       leadingWidth: 100,
@@ -121,6 +121,40 @@ class Leaderboard extends StatelessWidget {
               ),
             ),
           ),
+          DefaultTabController(
+            length: 3,
+            child: Container(
+              height: 45,
+              width: AppConstants.sizeConfig(context, 1).width,
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: Colors.white,
+                border: Border(
+                  right: BorderSide(),
+                  left: BorderSide(),
+                  bottom: BorderSide(),
+                  top: BorderSide()
+                ),
+              ),
+              child: const TabBar(
+                indicator: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.all(Radius.circular(10))
+                ),
+                labelColor: Colors .white,
+                unselectedLabelColor: Colors.black,
+                tabs: [
+                  Tab(text: 'Today'),
+                  Tab(text: 'Week'),
+                  Tab(text: 'Month'),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: AppConstants.sizeConfig(context, 0.02).height,
+          ),
           Container(
             height: AppConstants.sizeConfig(context, 0.6).height,
             padding: const EdgeInsets.all(16.0),
@@ -131,7 +165,7 @@ class Leaderboard extends StatelessWidget {
                   width: 342,
                   height: 70,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF979797).withAlpha(100),
+                    color: const Color(0xFF979797).withAlpha(10),
                     borderRadius: const BorderRadius.all(Radius.circular(10))
                   ),
                   child: Row(
@@ -152,7 +186,13 @@ class Leaderboard extends StatelessWidget {
                           children: [
                             Align(
                               alignment: Alignment.topLeft,
-                              child: hasPosition ? Text(samples[index].ranking.toString()) : null,
+                              child: hasPosition ? Text(
+                                  samples[index].ranking.toString(),
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  backgroundColor: Colors.orange,
+                                ),
+                              ) : Text(''),
                             ),
                           ],
                         ),
