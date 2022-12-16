@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/ui/edit.profile.dart';
-import 'package:live_me/app/ui/settings.dart';
-import 'package:live_me/app/widgets/icon.card.dart';
-
-import '../../widgets/dance.gridview.card.dart';
+import 'package:live_me/app/ui/screens.dart';
+import 'package:live_me/app/widgets/widgets.dart';
 
 class ProfileFragment extends StatelessWidget {
   const ProfileFragment({Key? key}) : super(key: key);

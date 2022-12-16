@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/widgets/activity.card.dart';
-
-import '../../widgets/app.bar.dart';
-import '../../widgets/gridview.card.dart';
+import 'package:live_me/app/widgets/widgets.dart';
 
 class LiveFragment extends StatelessWidget {
   const LiveFragment({Key? key}) : super(key: key);
