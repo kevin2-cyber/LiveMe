@@ -273,7 +273,7 @@ class Streaming extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
@@ -281,13 +281,13 @@ class Streaming extends StatelessWidget {
                       CircleAvatar(
                         radius: 20,
                         backgroundColor: withAlpha,
-                        child: Icon(
+                        child: const Icon(
                             Icons.add,
                           color: Color(0xFF0DD9C5),
                           size: 20,
                         ),
                       ),
-                      Text(
+                      const Text(
                           'Follow',
                         style: TextStyle(
                           color: Colors.white,
@@ -295,7 +295,7 @@ class Streaming extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
@@ -305,11 +305,11 @@ class Streaming extends StatelessWidget {
                         radius: 20,
                         child: Icon(
                             Icons.card_giftcard,
-                          color: Color(0xFFEDFF82).withAlpha(200),
+                          color: const Color(0xFFEDFF82).withAlpha(200),
                           size: 20,
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Gift',
                         style: TextStyle(
                           color: Colors.white,
