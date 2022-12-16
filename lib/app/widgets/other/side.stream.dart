@@ -23,6 +23,7 @@ class SideStream extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            // back to settings screen
             GestureDetector(
               onTap: () => Navigator.pop(context),
                 child: Image.asset(AppAssets.kSharingT),
