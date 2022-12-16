@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/widgets/app.button.dart';
+import 'package:live_me/app/widgets/widgets.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);

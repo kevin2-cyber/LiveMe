@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:live_me/app/ui/sign.up.dart';
-import 'package:live_me/app/widgets/app.button.dart';
+import 'package:live_me/app/ui/screens.dart';
+import 'package:live_me/app/widgets/widgets.dart';
 import 'package:live_me/app/core/core.dart';
 
 class Login extends StatefulWidget {

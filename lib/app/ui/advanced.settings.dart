@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
-import 'package:live_me/app/ui/notifications.dart';
+import 'package:live_me/app/ui/screens.dart';
 
 class AdvancedSettings extends StatelessWidget {
   const AdvancedSettings({Key? key}) : super(key: key);
