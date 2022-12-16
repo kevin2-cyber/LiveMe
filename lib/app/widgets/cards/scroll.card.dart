@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/app.assets.dart';
+import '../../core/app.assets.dart';
 
 class ScrollCard extends StatelessWidget {
   const ScrollCard({

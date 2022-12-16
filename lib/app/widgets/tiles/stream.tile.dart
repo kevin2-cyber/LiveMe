@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:live_me/app/widgets/stars.dart';
+import 'package:live_me/app/widgets/other/stars.dart';
 
-import '../core/core.dart';
+import '../../core/core.dart';
 
 class StreamedTiles extends StatelessWidget {
   const StreamedTiles({
