@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
-import '../widgets/bottom.message.box.dart';
-import '../widgets/side.stream.dart';
-import '../widgets/stars.dart';
-import '../widgets/stream.tile.dart';
-import '../widgets/text.suggestion.dart';
+import '../widgets/widgets.dart';
 
 class Streaming extends StatelessWidget {
   const Streaming({Key? key}) : super(key: key);
