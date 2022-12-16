@@ -3,7 +3,7 @@ import 'package:live_me/app/core/core.dart';
 import 'package:live_me/app/widgets/activity.card.dart';
 
 import '../../widgets/app.bar.dart';
-import '../../widgets/grid.view.card.dart';
+import '../../widgets/gridview.card.dart';
 
 class LiveFragment extends StatelessWidget {
   const LiveFragment({Key? key}) : super(key: key);

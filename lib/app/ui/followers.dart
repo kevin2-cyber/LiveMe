@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_me/app/core/core.dart';
 
-import '../widgets/custom.list.tile.dart';
+import '../widgets/custom.listtile.dart';
 
 class Followers extends StatelessWidget {
   const Followers({Key? key}) : super(key: key);
