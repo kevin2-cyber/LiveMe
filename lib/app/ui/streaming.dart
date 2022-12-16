@@ -272,6 +272,38 @@ class Streaming extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Image.asset(AppAssets.kFollowIcon),
+                      Text(
+                          'Follow',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    children: [
+                      Image.asset(
+                          AppAssets.kGiftIcon,
+                        height: 70,
+                        width: 70,
+                      ),
+                      Text(
+                        'Gift',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
