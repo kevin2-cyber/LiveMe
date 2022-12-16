@@ -60,6 +60,12 @@ class AppAssets{
   static String kListAvatar1 = 'assets/images/circular_list_1.png';
   static String kStreamingAvatar = 'assets/images/streaming_icon.png';
   static String kPhilipeAvatar = 'assets/images/philipe.png';
+  static String jason = 'assets/images/jason.png';
+  static String anna = 'assets/images/anna.png';
+  static String ryan = 'assets/images/ryan.png';
+  static String derralle = 'assets/images/derralle.png';
+  static String jordan = 'assets/images/jordan.png';
+  static String wayne = 'assets/images/wayne.png';
 
   // Videos
   static String kVideoUn = 'assets/images/video_un.png';
