@@ -12,6 +12,7 @@ class Streaming extends StatelessWidget {
   Widget build(BuildContext context) {
     const kGold = Color(0xFFFBBF00);
     const kColor2 = Color(0xFFDFDFDF);
+    var withAlpha = Colors.grey.shade800.withAlpha(150);
     return Scaffold(
       body: Container(
         height: AppConstants.sizeConfig(context, 1).height,
@@ -163,7 +164,7 @@ class Streaming extends StatelessWidget {
                     width: 70,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
+                      color: withAlpha,
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                     ),
                     child:  const Center(
@@ -182,7 +183,7 @@ class Streaming extends StatelessWidget {
                     width: 110,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
+                      color: withAlpha,
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                     ),
                     child:  const Center(
@@ -198,21 +199,21 @@ class Streaming extends StatelessWidget {
                     width: 05,
                   ),
                   CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    backgroundColor: withAlpha,
                     child: Image.asset(AppAssets.kEmojiUn),
                   ),
                   const SizedBox(
                     width: 05,
                   ),
                   CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    backgroundColor: withAlpha,
                     child: Image.asset(AppAssets.kEmojiD),
                   ),
                   const SizedBox(
                     width: 05,
                   ),
                   CircleAvatar(
-                    backgroundColor: Colors.grey.shade800.withAlpha(150),
+                    backgroundColor: withAlpha,
                     child: Image.asset(AppAssets.kEmojiT),
                   ),
                   const SizedBox(
@@ -222,7 +223,7 @@ class Streaming extends StatelessWidget {
                     width: 70,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
+                      color: withAlpha,
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                     ),
                     child:  const Center(
@@ -244,9 +245,9 @@ class Streaming extends StatelessWidget {
                 children: [
                   Container(
                     height: 41,
-                    width: 241,
+                    width: 280,
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade800.withAlpha(150),
+                      color: withAlpha,
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: TextFormField(
@@ -277,7 +278,15 @@ class Streaming extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Image.asset(AppAssets.kFollowIcon),
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: withAlpha,
+                        child: Icon(
+                            Icons.add,
+                          color: Color(0xFF0DD9C5),
+                          size: 20,
+                        ),
+                      ),
                       Text(
                           'Follow',
                         style: TextStyle(
@@ -291,10 +300,14 @@ class Streaming extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                          AppAssets.kGiftIcon,
-                        height: 70,
-                        width: 70,
+                      CircleAvatar(
+                        backgroundColor: withAlpha,
+                        radius: 20,
+                        child: Icon(
+                            Icons.card_giftcard,
+                          color: Color(0xFFEDFF82).withAlpha(200),
+                          size: 20,
+                        ),
                       ),
                       Text(
                         'Gift',
