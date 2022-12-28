@@ -1,5 +1,5 @@
 
-class AppAssets {
+class Assets {
 
   // Icons
   static String kCommentDarkIcon = 'assets/icons/comment_dark.png';
